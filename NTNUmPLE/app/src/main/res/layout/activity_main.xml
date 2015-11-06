@@ -25,7 +25,7 @@
             android:gravity="right">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageButtonCourseHelp"
                 android:background="@drawable/information"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -48,7 +48,7 @@
                 android:layout_marginRight="12dp"/>
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButtonTodoList"
                 android:background="@drawable/todo1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -83,7 +83,7 @@
 
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButtonFacilityInfo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="5dp"
@@ -94,7 +94,8 @@
                 android:adjustViewBounds="true"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/phonebook" />
+                android:background="@drawable/phonebook"
+                android:onClick="coursehelpButtonOnClick" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
                 android:layout_marginLeft="18dp"/>
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageButtonTools"
                 android:background="@drawable/tools1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
