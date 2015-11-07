@@ -26,13 +26,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".coursehelp.CourseInfoMenuActivity" >
+        <activity android:name=".coursehelp.CourseInfoMenuActivity"
+            android:label="Course Help" >
         </activity>
-        <activity android:name=".facilityinfo.FacilityInfoActivity" >
+        <activity android:name=".facilityinfo.FacilityInfoActivity"
+            android:label="Facility Information" >
         </activity>
-        <activity android:name=".todolist.TodoListActivity" >
+        <activity android:name=".todolist.TodoListActivity"
+            android:label="To-do List" >
         </activity>
-        <activity android:name=".tools.ToolsActivity" >
+        <activity android:name=".tools.ToolsActivity"
+            android:label="Tools" >
         </activity>
     </application>
 
