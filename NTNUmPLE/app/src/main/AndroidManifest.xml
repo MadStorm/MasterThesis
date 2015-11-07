@@ -27,16 +27,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".coursehelp.CourseInfoMenuActivity"
-            android:label="Course Help" >
+            android:label="@string/activity_name_course_help" >
         </activity>
         <activity android:name=".facilityinfo.FacilityInfoActivity"
-            android:label="Facility Information" >
+            android:label="@string/activity_name_facility_info" >
         </activity>
         <activity android:name=".todolist.TodoListActivity"
-            android:label="To-do List" >
+            android:label="@string/activity_name_todo_list" >
         </activity>
         <activity android:name=".tools.ToolsActivity"
-            android:label="Tools" >
+            android:label="@string/activity_name_tools" >
         </activity>
     </application>
 
