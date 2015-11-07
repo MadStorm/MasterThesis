@@ -1,14 +1,15 @@
-package lukelunix.ntnumple;
+package lukelunix.ntnumple.mainmenu;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import lukelunix.ntnumple.R;
+
 public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
@@ -29,7 +30,6 @@ public class SplashActivity extends Activity {
 
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
         super.onPause();
         finish();
     }
