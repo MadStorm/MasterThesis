@@ -54,9 +54,4 @@ public class TaskAdapter extends ArrayAdapter<Task> {
     public void removeTask(int pos){
         taskList.remove(pos);
     }
-
-
-
-
-
 }
