@@ -1,7 +1,18 @@
 <resources>
+
+    //Main Menu
     <string name="app_name">NTNU mPLE</string>
     <string name="activity_name_course_help">Course Help</string>
     <string name="activity_name_facility_info">Facility Info</string>
     <string name="activity_name_todo_list">To-do List</string>
     <string name="activity_name_tools">Tools</string>
+
+    //Facility Info
+    <string name="activity_name_faculty">Faculties</string>
+    <string name="activity_name_library">Libraries</string>
+    <string name="activity_name_orakel">Orakel</string>
+    <string name="activity_name_studentservice">Studentservice</string>
+    <string name="activity_name_akademika">Akademika</string>
+    <string name="activity_name_sit">SiT</string>
+
 </resources>
