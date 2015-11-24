@@ -8,6 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        //Splash Screen
         <activity
             android:name=".mainmenu.SplashActivity"
             android:label="@string/app_name" >
@@ -17,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        //Main Menu
         <activity
             android:name=".mainmenu.MainActivity"
             android:label="@string/app_name" >
@@ -26,6 +30,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        //Main menu buttons
         <activity android:name=".coursehelp.CourseInfoMenuActivity"
             android:label="@string/activity_name_course_help" >
         </activity>
@@ -38,6 +44,28 @@
         <activity android:name=".tools.ToolsActivity"
             android:label="@string/activity_name_tools" >
         </activity>
+
+        //Facility Info Buttons
+        <activity android:name=".facilityinfo.FacultiesActivity"
+            android:label="@string/activity_name_faculty" >
+        </activity>
+        <activity android:name=".facilityinfo.LibrariesActivity"
+            android:label="@string/activity_name_library" >
+        </activity>
+        <activity android:name=".facilityinfo.OrakelActivity"
+            android:label="@string/activity_name_orakel" >
+        </activity>
+        <activity android:name=".facilityinfo.StudentserviceActivity"
+            android:label="@string/activity_name_studentservice" >
+        </activity>
+        <activity android:name=".facilityinfo.AkademikaActivity"
+            android:label="@string/activity_name_akademika" >
+        </activity>
+        <activity android:name=".facilityinfo.SiTActivity"
+            android:label="@string/activity_name_sit" >
+        </activity>
+
+
     </application>
 
 </manifest>
