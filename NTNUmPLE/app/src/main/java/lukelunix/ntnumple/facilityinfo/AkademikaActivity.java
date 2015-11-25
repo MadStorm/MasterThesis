@@ -9,15 +9,10 @@ import lukelunix.ntnumple.R;
 /**
  * Created by Luka on 24.11.2015.
  */
-public class AkademikaActivity extends AppCompatActivity implements View.OnClickListener {
+public class AkademikaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_akademika);
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 }

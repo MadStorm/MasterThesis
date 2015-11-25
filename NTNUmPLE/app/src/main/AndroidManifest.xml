@@ -64,8 +64,6 @@
         <activity android:name=".facilityinfo.SiTActivity"
             android:label="@string/activity_name_sit" >
         </activity>
-
-
     </application>
 
 </manifest>
