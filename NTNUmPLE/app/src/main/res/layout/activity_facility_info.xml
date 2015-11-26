@@ -33,8 +33,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:onClick="facultyClick();" />
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:layout_width="wrap_content"
