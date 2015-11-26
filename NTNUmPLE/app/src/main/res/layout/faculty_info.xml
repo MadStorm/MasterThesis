@@ -6,7 +6,7 @@ android:layout_height="wrap_content"
 android:background="#ffffff">
 
 <TextView
-    android:id="@+id/child_txt"
+    android:id="@+id/faculty_info"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
