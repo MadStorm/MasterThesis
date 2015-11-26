@@ -32,38 +32,49 @@
         </activity>
 
         //Main menu buttons
-        <activity android:name=".coursehelp.CourseInfoMenuActivity"
+        <activity
+            android:name=".coursehelp.CourseInfoMenuActivity"
             android:label="@string/activity_name_course_help" >
         </activity>
-        <activity android:name=".facilityinfo.FacilityInfoActivity"
+        <activity
+            android:name=".facilityinfo.FacilityInfoActivity"
             android:label="@string/activity_name_facility_info" >
         </activity>
-        <activity android:name=".todolist.TodoListActivity"
+        <activity
+            android:name=".todolist.TodoListActivity"
             android:label="@string/activity_name_todo_list" >
         </activity>
-        <activity android:name=".tools.ToolsActivity"
+        <activity
+            android:name=".tools.ToolsActivity"
             android:label="@string/activity_name_tools" >
         </activity>
 
         //Facility Info Buttons
-        <activity android:name=".facilityinfo.FacultiesActivity"
+        <activity
+            android:name=".facilityinfo.faculties.FacultiesActivity"
             android:label="@string/activity_name_faculty" >
         </activity>
-        <activity android:name=".facilityinfo.LibrariesActivity"
+        <activity
+            android:name=".facilityinfo.libraries.LibrariesActivity"
             android:label="@string/activity_name_library" >
         </activity>
-        <activity android:name=".facilityinfo.OrakelActivity"
+        <activity
+            android:name=".facilityinfo.orakel.OrakelActivity"
             android:label="@string/activity_name_orakel" >
         </activity>
-        <activity android:name=".facilityinfo.StudentserviceActivity"
+        <activity
+            android:name=".facilityinfo.studentservice.StudentserviceActivity"
             android:label="@string/activity_name_studentservice" >
         </activity>
-        <activity android:name=".facilityinfo.AkademikaActivity"
+        <activity
+            android:name=".facilityinfo.akademika.AkademikaActivity"
             android:label="@string/activity_name_akademika" >
         </activity>
-        <activity android:name=".facilityinfo.SiTActivity"
+        <activity
+            android:name=".facilityinfo.sit.SiTActivity"
             android:label="@string/activity_name_sit" >
         </activity>
+
     </application>
 
 </manifest>
