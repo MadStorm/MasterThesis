@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.TreeMap;
 
 import lukelunix.ntnumple.R;
-import lukelunix.ntnumple.facilityinfo.libraries.LibrariesData;
-import lukelunix.ntnumple.facilityinfo.libraries.LibraryAdapter;
 
 /**
  * Created by Luka on 24.11.2015.

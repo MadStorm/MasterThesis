@@ -37,7 +37,7 @@ public class OrakelData {
         orakelOya.add("Office: Øya, Kunnskapssenteret, 2. floor");
 
 
-        //Put Faculty Category together with Arraylist of faculty_info
+        //Put Orakel Category together with Arraylist of orakel_info
         orakelData.put("Orakel at Dragvoll", orakelDragvoll);
         orakelData.put("Orakel at Gløshaugen", orakelGloshaugen);
         orakelData.put("Orakel at Øya", orakelOya);

@@ -93,7 +93,7 @@ public class LibrariesData {
         technologyLibrary.add("Visiting address: Høgskoleringen 1");
 
 
-        //Put Faculty Category together with Arraylist of faculty_info
+        //Put Library Category together with Arraylist of library_info
         librariesData.put("Architecture and Civil Engineering Library", architectureLibrary);
         librariesData.put("Dora Library", doraLibrary);
         librariesData.put("Dragvoll Library", dragvollLibrary);
