@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
+import lukelunix.ntnumple.facilityinfo.akademika.AkademikaActivity;
+import lukelunix.ntnumple.facilityinfo.faculties.FacultiesActivity;
+import lukelunix.ntnumple.facilityinfo.libraries.LibrariesActivity;
+import lukelunix.ntnumple.facilityinfo.orakel.OrakelActivity;
+import lukelunix.ntnumple.facilityinfo.sit.SiTActivity;
+import lukelunix.ntnumple.facilityinfo.studentservice.StudentserviceActivity;
 
 
 public class FacilityInfoActivity extends AppCompatActivity implements View.OnClickListener{
@@ -37,6 +43,7 @@ public class FacilityInfoActivity extends AppCompatActivity implements View.OnCl
         akademika.setOnClickListener(this);
         sit = (ImageButton)findViewById(R.id.imageButtonSiT);
         sit.setOnClickListener(this);
+
     }
 
     private void facultyClick(){
@@ -87,10 +94,8 @@ public class FacilityInfoActivity extends AppCompatActivity implements View.OnCl
                 sitClick();
                 break;
 
+
         }
     }
-
-
-
 
 }
