@@ -1,4 +1,4 @@
-package lukelunix.ntnumple.facilityinfo;
+package lukelunix.ntnumple.facilityinfo.faculties;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import lukelunix.ntnumple.R;
 
@@ -19,10 +19,10 @@ import lukelunix.ntnumple.R;
 public class FacultyAdapter extends BaseExpandableListAdapter{
 
     private Context ctx;
-    private HashMap<String, List<String>> faculties;
+    private TreeMap<String, List<String>> faculties;
     private List<String> facultyList;
 
-    public FacultyAdapter(Context ctx, HashMap<String, List<String>> faculties, List<String> facultyList){
+    public FacultyAdapter(Context ctx, TreeMap<String, List<String>> faculties, List<String> facultyList){
 
         this.ctx = ctx;
         this.faculties = faculties;
@@ -71,7 +71,7 @@ public class FacultyAdapter extends BaseExpandableListAdapter{
             LayoutInflater inflator = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflator.inflate(R.layout.faculty_category, parent, false);
         }
-        TextView parent_textview = (TextView) convertView.findViewById(R.id.parent_txt);
+        TextView parent_textview = (TextView) convertView.findViewById(R.id.faculty_category);
         parent_textview.setTypeface(null, Typeface.BOLD);
         parent_textview.setText(group_title);
         return convertView;
@@ -84,7 +84,7 @@ public class FacultyAdapter extends BaseExpandableListAdapter{
             LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.faculty_info, parentView, false);
         }
-        TextView child_textview = (TextView) convertView.findViewById(R.id.child_txt);
+        TextView child_textview = (TextView) convertView.findViewById(R.id.faculty_info);
         child_textview.setText(child_title);
         return convertView;
     }

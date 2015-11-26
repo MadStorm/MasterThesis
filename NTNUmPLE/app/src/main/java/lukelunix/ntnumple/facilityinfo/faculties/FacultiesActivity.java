@@ -1,15 +1,12 @@
-package lukelunix.ntnumple.facilityinfo;
+package lukelunix.ntnumple.facilityinfo.faculties;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 import lukelunix.ntnumple.R;
 
@@ -20,7 +17,7 @@ public class FacultiesActivity extends AppCompatActivity{
 
     //Declare global variables for FacultiesActivity
     private ExpandableListView expFacultyList;
-    private HashMap<String, List<String>> facultyData;
+    private TreeMap<String, List<String>> facultyData;
     private List<String> facultyList;
     private FacultyAdapter fadapter;
 

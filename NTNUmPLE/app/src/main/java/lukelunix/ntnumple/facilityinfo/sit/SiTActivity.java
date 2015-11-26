@@ -1,4 +1,4 @@
-package lukelunix.ntnumple.facilityinfo;
+package lukelunix.ntnumple.facilityinfo.sit;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

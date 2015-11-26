@@ -1,18 +1,18 @@
-package lukelunix.ntnumple.facilityinfo;
+package lukelunix.ntnumple.facilityinfo.faculties;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
 
 /**
  * Created by Luka on 24.11.2015.
  */
 public class FacultiesData {
 
-    public static HashMap<String, List<String>> getData(){
+    public static TreeMap<String, List<String>> getData(){
 
         //Declare local variables for FacultiesData
-        HashMap<String, List<String>>  facultiesData = new HashMap<String, List<String>>();
+        TreeMap<String, List<String>>  facultiesData = new TreeMap<String, List<String>>();
         List<String> facultyOfArchitecture = new ArrayList<String>();
         List<String> facultyOfEngineeringScience = new ArrayList<String>();
         List<String> facultyOfHumanities = new ArrayList<String>();
@@ -136,7 +136,7 @@ public class FacultiesData {
         facultiesData.put("Faculty of Medicine", facultyOfMedicine);
         facultiesData.put("Faculty of Social Sciences and Technology Management", facultyOfSocialSciences);
 
-        //Return Hashmap with Faculty_Categories and Faculty_Info
+        //Return Treemap with Faculty_Categories and Faculty_Info
         return facultiesData;
 
     }
