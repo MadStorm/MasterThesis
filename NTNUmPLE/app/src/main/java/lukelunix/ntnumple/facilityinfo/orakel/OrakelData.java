@@ -20,20 +20,20 @@ public class OrakelData {
         //Orakel Dragvoll
         orakelDragvoll.add("Opening hours: Mon-Fri 08:00-16:30");
         orakelDragvoll.add("Phone: 73 59 18 10 (available 08:00-16:30)");
-        orakelDragvoll.add("Email: orakel@ntnu.no");
+        orakelDragvoll.add("E-mail: orakel@ntnu.no");
         orakelDragvoll.add("Office: Bygning 8, nivå 5 (Library)");
 
 
         //Orakel Gløshaugen
         orakelGloshaugen.add("Opening hours: Mon-Fri 10:15 - 16:00");
         orakelGloshaugen.add("Phone: 73 59 15 00 (available 08:00-16:00)");
-        orakelGloshaugen.add("Email: orakel@ntnu.no");
+        orakelGloshaugen.add("E-mail: orakel@ntnu.no");
         orakelGloshaugen.add("Office: Realfagbiblioteket, realfagbygget (Library)");
 
 
         //Orakel Øya
         orakelOya.add("Opening hours: Mon-Fri 10:15 - 14:00");
-        orakelOya.add("Email: orakel@ntnu.no");
+        orakelOya.add("E-mail: orakel@ntnu.no");
         orakelOya.add("Office: Øya, Kunnskapssenteret, 2. floor");
 
 
