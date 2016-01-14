@@ -17,4 +17,7 @@
     <string name="activity_name_akademika">Akademika</string>
     <string name="activity_name_sit">SiT</string>
 
+    //Tools
+    <string name="activity_name_roomreservation">Room Reservation</string>
+
 </resources>
