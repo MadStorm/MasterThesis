@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lukelunix.ntnumple" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -72,10 +74,15 @@
         </activity>
         <activity
             android:name=".tools.roomreservation.RoomreservationActivity"
-            android:label="@string/activity_name_roomreservation">
+            android:label="@string/activity_name_roomreservation" >
         </activity>
-        <activity android:name=".tools.mazemap.MazemapActivity" >
+        <activity android:name=".tools.mazemap.MazemapActivity"
+            android:label="@string/activity_name_mazemap" >
+        </activity>
+        <activity android:name=".tools.kahoot.KahootActivity"
+            android:label="@string/activity_name_kahoot"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>
