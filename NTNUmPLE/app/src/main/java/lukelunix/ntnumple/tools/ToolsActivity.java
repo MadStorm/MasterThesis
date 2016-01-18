@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
+import lukelunix.ntnumple.tools.kahoot.KahootActivity;
 import lukelunix.ntnumple.tools.mazemap.MazemapActivity;
 import lukelunix.ntnumple.tools.roomreservation.RoomreservationActivity;
 
@@ -36,7 +37,7 @@ public class ToolsActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void kahootClick(){
-
+        startActivity(new Intent(getApplicationContext(), KahootActivity.class));
     }
 
     private void roomreservationClick(){
