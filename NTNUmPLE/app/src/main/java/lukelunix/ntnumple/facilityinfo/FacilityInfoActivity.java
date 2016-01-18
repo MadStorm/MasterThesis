@@ -3,6 +3,7 @@ package lukelunix.ntnumple.facilityinfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -13,6 +14,7 @@ import lukelunix.ntnumple.facilityinfo.libraries.LibrariesActivity;
 import lukelunix.ntnumple.facilityinfo.orakel.OrakelActivity;
 import lukelunix.ntnumple.facilityinfo.sit.SiTActivity;
 import lukelunix.ntnumple.facilityinfo.studentservice.StudentserviceActivity;
+import lukelunix.ntnumple.mainmenu.MainActivity;
 
 
 public class FacilityInfoActivity extends AppCompatActivity implements View.OnClickListener{
@@ -44,7 +46,25 @@ public class FacilityInfoActivity extends AppCompatActivity implements View.OnCl
         sit = (ImageButton)findViewById(R.id.imageButtonSiT);
         sit.setOnClickListener(this);
 
+        //Add home menu button to actionbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.rsz_homeicon);
     }
+
+    //Return to Main Menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                Intent homeIntent = new Intent(this, MainActivity.class);
+                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(homeIntent);
+        }
+        return (super.onOptionsItemSelected(menuItem));
+    }
+
 
     private void facultyClick(){
         startActivity(new Intent(getApplicationContext(), FacultiesActivity.class));
