@@ -74,10 +74,12 @@
         </activity>
         <activity
             android:name=".tools.roomreservation.RoomreservationActivity"
-            android:label="@string/activity_name_roomreservation" >
+            android:label="@string/activity_name_roomreservation"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".tools.mazemap.MazemapActivity"
-            android:label="@string/activity_name_mazemap" >
+            android:label="@string/activity_name_mazemap"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".tools.kahoot.KahootActivity"
             android:label="@string/activity_name_kahoot"
