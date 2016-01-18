@@ -19,5 +19,7 @@
 
     //Tools
     <string name="activity_name_roomreservation">Room Reservation</string>
+    <string name="activity_name_kahoot">Kahoot</string>
+    <string name="activity_name_mazemap">Mazemap</string>
 
 </resources>
