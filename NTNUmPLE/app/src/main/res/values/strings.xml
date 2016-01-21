@@ -9,6 +9,11 @@
     <string name="activity_name_todo_list">To-do List</string>
     <string name="activity_name_tools">Tools</string>
 
+    //Course Help
+    <string name="activity_name_courses">Courses</string>
+    <string name="activity_name_courserating">Course Rating</string>
+    <string name="activity_name_forum">Forum</string>
+
     //Facility Info
     <string name="activity_name_faculty">Faculties</string>
     <string name="activity_name_library">Libraries</string>
@@ -16,6 +21,9 @@
     <string name="activity_name_studentservice">Studentservice</string>
     <string name="activity_name_akademika">Akademika</string>
     <string name="activity_name_sit">SiT</string>
+
+    //To-do List
+    <string name="activity_name_todolist">To-Do List</string>
 
     //Tools
     <string name="activity_name_roomreservation">Room Reservation</string>
