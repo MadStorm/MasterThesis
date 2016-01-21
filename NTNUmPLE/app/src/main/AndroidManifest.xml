@@ -10,26 +10,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        //==========================================================================================
         //Splash Screen
         <activity
             android:name=".mainmenu.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        //==========================================================================================
         //Main Menu
         <activity
             android:name=".mainmenu.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="lukelunix.ntnumple.MAINACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
+                <action
+                    android:name="lukelunix.ntnumple.MAINACTIVITY" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        //==========================================================================================
         //Main menu buttons
         <activity
             android:name=".coursehelp.CourseInfoMenuActivity"
@@ -40,13 +45,27 @@
             android:label="@string/activity_name_facility_info" >
         </activity>
         <activity
-            android:name=".todolist.TodoListActivity"
-            android:label="@string/activity_name_todo_list" >
-        </activity>
-        <activity
             android:name=".tools.ToolsActivity"
             android:label="@string/activity_name_tools" >
         </activity>
+
+        //==========================================================================================
+        //Course Help Menu
+        <activity
+            android:name=".coursehelp.courserating.CourseratingActivity"
+            android:label="@string/activity_name_courserating" >
+        </activity>
+        <activity
+            android:name=".coursehelp.courses.CoursesActivity"
+            android:label="@string/activity_name_courses" >
+        </activity>
+        <activity
+            android:name=".coursehelp.forum.ForumActivity"
+            android:label="@string/activity_name_forum" >
+        </activity>
+
+
+        //==========================================================================================
         //Facility Info Buttons
         <activity
             android:name=".facilityinfo.faculties.FacultiesActivity"
@@ -72,19 +91,32 @@
             android:name=".facilityinfo.sit.SiTActivity"
             android:label="@string/activity_name_sit" >
         </activity>
+
+        //==========================================================================================
+        //To-do List
+        <activity
+            android:name=".todolist.TodoListActivity"
+            android:label="@string/activity_name_todolist" >
+        </activity>
+
+        //==========================================================================================
+        //Tools Menu
         <activity
             android:name=".tools.roomreservation.RoomreservationActivity"
             android:label="@string/activity_name_roomreservation"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".tools.mazemap.MazemapActivity"
+        <activity
+            android:name=".tools.mazemap.MazemapActivity"
             android:label="@string/activity_name_mazemap"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".tools.kahoot.KahootActivity"
+        <activity
+            android:name=".tools.kahoot.KahootActivity"
             android:label="@string/activity_name_kahoot"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
     </application>
 
 </manifest>
