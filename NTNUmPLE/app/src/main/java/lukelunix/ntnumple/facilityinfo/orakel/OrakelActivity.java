@@ -41,7 +41,7 @@ public class OrakelActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.rsz_homeicon);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.homewhite);
     }
 
     //Return to Main Menu

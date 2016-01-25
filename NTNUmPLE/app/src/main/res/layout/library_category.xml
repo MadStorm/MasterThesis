@@ -9,7 +9,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:paddingLeft="20dp"
-        android:src="@drawable/libraryicon"
+        android:src="@drawable/librarybooks"
         android:id="@+id/imageViewLibrary"
         android:layout_gravity="center_vertical"/>
 

@@ -23,9 +23,9 @@
 
             <ImageButton
                 android:id="@+id/imageButtonFaculty"
-                android:background="@drawable/balance"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:background="@drawable/faculty"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="30dp"
@@ -102,8 +102,8 @@
 
             <ImageButton
                 android:id="@+id/imageButtonLibrary"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="5dp"
@@ -112,7 +112,7 @@
                 android:adjustViewBounds="true"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/libraryicon" />
+                android:background="@drawable/librarybooks" />
 
             <TextView
                 android:layout_width="wrap_content"
