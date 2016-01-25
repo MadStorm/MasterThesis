@@ -23,7 +23,7 @@
 
             <ImageButton
                 android:id="@+id/imageButtonFaculty"
-                android:background="@drawable/facultyicon"
+                android:background="@drawable/balance"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginBottom="5dp"
