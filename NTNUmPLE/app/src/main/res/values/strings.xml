@@ -30,4 +30,22 @@
     <string name="activity_name_kahoot">Kahoot</string>
     <string name="activity_name_mazemap">Mazemap</string>
 
+    <string-array name="course_names">
+        <item>IT2805</item>
+        <item>IT3010</item>
+        <item>IT3020</item>
+        <item>Master</item>
+        <item>IT28205</item>
+        <item>IT30120</item>
+        <item>IT302230</item>
+        <item>Maste324r</item>
+        <item>IT280524</item>
+        <item>IT3010243</item>
+        <item>IT302024</item>
+        <item>Master24</item>
+        <item>IT2802345</item>
+        <item>IT301240</item>
+        <item>IT3020234</item>
+        <item>Maste234r</item>
+    </string-array>
 </resources>
