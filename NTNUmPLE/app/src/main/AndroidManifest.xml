@@ -1,122 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lukelunix.ntnumple" >
+package="lukelunix.ntnumple">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.INTERNET" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        //==========================================================================================
-        //Splash Screen
-        <activity
-            android:name=".mainmenu.SplashActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN" />
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        //==========================================================================================
-        //Main Menu
-        <activity
-            android:name=".mainmenu.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action
-                    android:name="lukelunix.ntnumple.MAINACTIVITY" />
-                <category
-                    android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        //==========================================================================================
-        //Main menu buttons
-        <activity
-            android:name=".coursehelp.CourseInfoMenuActivity"
-            android:label="@string/activity_name_course_help" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.FacilityInfoActivity"
-            android:label="@string/activity_name_facility_info" >
-        </activity>
-        <activity
-            android:name=".tools.ToolsActivity"
-            android:label="@string/activity_name_tools" >
-        </activity>
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    //==========================================================================================
+    //Splash Screen
+    <activity
+        android:name=".mainmenu.SplashActivity"
+        android:label="@string/app_name">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        //==========================================================================================
-        //Course Help Menu
-        <activity
-            android:name=".coursehelp.courserating.CourseratingActivity"
-            android:label="@string/activity_name_courserating" >
-        </activity>
-        <activity
-            android:name=".coursehelp.courses.CoursesActivity"
-            android:label="@string/activity_name_courses" >
-        </activity>
-        <activity
-            android:name=".coursehelp.forum.ForumActivity"
-            android:label="@string/activity_name_forum" >
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    //==========================================================================================
+    //Main Menu
+    <activity
+        android:name=".mainmenu.MainActivity"
+        android:label="@string/app_name">
+        <intent-filter>
+            <action android:name="lukelunix.ntnumple.MAINACTIVITY" />
 
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    //==========================================================================================
+    //Main menu buttons
+    <activity
+        android:name=".coursehelp.CourseInfoMenuActivity"
+        android:label="@string/activity_name_course_help"></activity>
+    <activity
+        android:name=".facilityinfo.FacilityInfoActivity"
+        android:label="@string/activity_name_facility_info"></activity>
+    <activity
+        android:name=".tools.ToolsActivity"
+        android:label="@string/activity_name_tools"></activity>
+    //==========================================================================================
+    //Course Help Menu
+    <activity
+        android:name=".coursehelp.courserating.CourseratingActivity"
+        android:label="@string/activity_name_courserating"></activity>
+    <activity
+        android:name=".coursehelp.courses.CoursesActivity"
+        android:label="@string/activity_name_courses"></activity>
+    <activity
+        android:name=".coursehelp.courserating.ClassmateActivity"
+        android:label="Classmate"></activity>
+    <activity
+        android:name=".coursehelp.forum.ForumActivity"
+        android:label="@string/activity_name_forum"></activity>
+    //==========================================================================================
+    //Facility Info Buttons
+    <activity
+        android:name=".facilityinfo.faculties.FacultiesActivity"
+        android:label="@string/activity_name_faculty"></activity>
+    <activity
+        android:name=".facilityinfo.libraries.LibrariesActivity"
+        android:label="@string/activity_name_library"></activity>
+    <activity
+        android:name=".facilityinfo.orakel.OrakelActivity"
+        android:label="@string/activity_name_orakel"></activity>
+    <activity
+        android:name=".facilityinfo.studentservice.StudentserviceActivity"
+        android:label="@string/activity_name_studentservice"></activity>
+    <activity
+        android:name=".facilityinfo.akademika.AkademikaActivity"
+        android:label="@string/activity_name_akademika"></activity>
+    <activity
+        android:name=".facilityinfo.sit.SiTActivity"
+        android:label="@string/activity_name_sit"></activity>
+    //==========================================================================================
+    //To-do List
+    <activity
+        android:name=".todolist.TodoListActivity"
+        android:label="@string/activity_name_todolist"></activity>
+    //==========================================================================================
+    //Tools Menu
+    <activity
+        android:name=".tools.roomreservation.RoomreservationActivity"
+        android:label="Room Reservation"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
+    <activity
+        android:name=".tools.mazemap.MazemapActivity"
+        android:label="@string/activity_name_mazemap"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
+    <activity
+        android:name=".tools.kahoot.KahootActivity"
+        android:label="@string/activity_name_kahoot"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        //==========================================================================================
-        //Facility Info Buttons
-        <activity
-            android:name=".facilityinfo.faculties.FacultiesActivity"
-            android:label="@string/activity_name_faculty" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.libraries.LibrariesActivity"
-            android:label="@string/activity_name_library" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.orakel.OrakelActivity"
-            android:label="@string/activity_name_orakel" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.studentservice.StudentserviceActivity"
-            android:label="@string/activity_name_studentservice" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.akademika.AkademikaActivity"
-            android:label="@string/activity_name_akademika" >
-        </activity>
-        <activity
-            android:name=".facilityinfo.sit.SiTActivity"
-            android:label="@string/activity_name_sit" >
-        </activity>
-
-        //==========================================================================================
-        //To-do List
-        <activity
-            android:name=".todolist.TodoListActivity"
-            android:label="@string/activity_name_todolist" >
-        </activity>
-
-        //==========================================================================================
-        //Tools Menu
-        <activity
-            android:name=".tools.roomreservation.RoomreservationActivity"
-            android:label="@string/activity_name_roomreservation"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
-            android:name=".tools.mazemap.MazemapActivity"
-            android:label="@string/activity_name_mazemap"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
-            android:name=".tools.kahoot.KahootActivity"
-            android:label="@string/activity_name_kahoot"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-
-    </application>
+</application>
 
 </manifest>
