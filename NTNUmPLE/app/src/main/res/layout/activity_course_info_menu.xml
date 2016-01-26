@@ -87,7 +87,7 @@
 
             <TextView
                 android:id="@+id/textViewCourseRating"
-                android:text="Reviews"
+                android:text="Classmate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"

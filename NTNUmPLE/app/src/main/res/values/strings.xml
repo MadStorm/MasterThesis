@@ -13,6 +13,7 @@
     <string name="activity_name_courses">Courses</string>
     <string name="activity_name_courserating">Course Rating</string>
     <string name="activity_name_forum">Forum</string>
+    <string name="activity_name_classmate">Classmate</string>
 
     //Facility Info
     <string name="activity_name_faculty">Faculties</string>
