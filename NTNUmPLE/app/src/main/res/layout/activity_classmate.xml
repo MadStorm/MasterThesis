@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="lukelunix.ntnumple.tools.roomreservation.RoomreservationActivity"
+    tools:context=".coursehelp.courserating.ClassmateActivity"
     android:background="#ffffff">
 
     <WebView
-        android:id="@+id/webviewroomreservation"
+        android:id="@+id/webviewclassmate"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="#ffffff" />
