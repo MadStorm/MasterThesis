@@ -10,8 +10,6 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_gravity="center"
-        android:weightSum="1"
         android:background="#ffffff">
 
         <LinearLayout
@@ -20,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:gravity="right">
+            android:gravity="right"
+            android:layout_marginBottom="25dp">
 
 
             <ImageButton
@@ -30,7 +29,8 @@
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/textView"
@@ -40,7 +40,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="100dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonTodoList"
@@ -49,7 +50,8 @@
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/textView2"
@@ -59,7 +61,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="100dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp" />
 
 
         </LinearLayout>
@@ -70,7 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:gravity="left">
+            android:gravity="left"
+            android:layout_marginBottom="25dp" >
 
             <ImageButton
                 android:id="@+id/imageButtonFacilityInfo"
@@ -79,7 +82,8 @@
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/textView3"
@@ -89,7 +93,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="100dp"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="50dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonTools"
@@ -98,7 +103,8 @@
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/textView4"

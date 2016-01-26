@@ -8,64 +8,59 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:background="#ffffff">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:gravity="right">
+            android:gravity="right"
+            android:layout_marginBottom="25dp">
 
             <ImageButton
                 android:id="@+id/imageButtonMazeMap"
                 android:background="@drawable/mazemapicon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewMazeMap"
+                android:text="Mazemap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Mazemap"
-                android:id="@+id/textViewMazeMap"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="30dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonRoomReservation"
                 android:background="@drawable/orakelicon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewRoomReservation"
+                android:text="Room Reserv."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Room Reserv."
-                android:id="@+id/textViewRoomReservation"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="15dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp" />
 
 
 
@@ -76,56 +71,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:gravity="left">
+            android:layout_weight="0.5"
+            android:gravity="left"
+            android:layout_marginBottom="25dp" >
 
             <ImageButton
                 android:id="@+id/imageButtonKahoot"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:background="@drawable/kahooticon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/kahooticon" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewKahoot"
+                android:text="Kahoot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Kahoot"
-                android:id="@+id/textViewKahoot"
-                android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="40dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="50dp"/>
 
 
             <ImageButton
                 android:id="@+id/imageButtonDummy"
                 android:background="#ffffff"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewDummy"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=""
-                android:id="@+id/textViewDummy"
-                android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="60dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"/>
 
 
 

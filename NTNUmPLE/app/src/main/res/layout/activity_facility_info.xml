@@ -8,16 +8,15 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:background="#ffffff">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
             android:gravity="right">
 
@@ -26,69 +25,63 @@
                 android:background="@drawable/faculty"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewFaculty"
+                android:text="Faculties"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Faculties"
-                android:id="@+id/textViewFaculty"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="35dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonOrakel"
                 android:background="@drawable/orakelicon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewOrakel"
+                android:text="Orakel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Orakel"
-                android:id="@+id/textViewOrakel"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="45dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonAkademika"
                 android:background="@drawable/akademikaicon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewAkademika"
+                android:text="Akademika"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Akademika"
-                android:id="@+id/textViewAkademika"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="30dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"/>
 
 
         </LinearLayout>
@@ -98,79 +91,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
             android:gravity="left">
 
             <ImageButton
                 android:id="@+id/imageButtonLibrary"
+                android:background="@drawable/librarybooks"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/librarybooks" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewLibraries"
+                android:text="Libraries"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Libraries"
-                android:id="@+id/textViewLibraries"
-                android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="35dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonStudentservice"
                 android:background="@drawable/studentserviceicon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewStudentservice"
+                android:text="Studentservice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Studentservice"
-                android:id="@+id/textViewStudentservice"
-                android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="10dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonSiT"
                 android:background="@drawable/siticon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:adjustViewBounds="true"
-                android:padding="20dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
+                android:id="@+id/textViewSiT"
+                android:text="SiT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="SiT"
-                android:id="@+id/textViewSiT"
-                android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="60dp"/>
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"/>
 
 
 
