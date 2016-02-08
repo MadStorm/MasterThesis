@@ -13,7 +13,7 @@ import lukelunix.ntnumple.coursehelp.courses.CoursesActivity;
 import lukelunix.ntnumple.coursehelp.forum.ForumActivity;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
-public class CourseInfoMenuActivity extends AppCompatActivity implements View.OnClickListener {
+public class CoursehelpActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Course Help menu buttons
     private ImageButton courses;

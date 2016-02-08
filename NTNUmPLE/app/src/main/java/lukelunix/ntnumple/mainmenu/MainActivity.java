@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
-import lukelunix.ntnumple.coursehelp.CourseInfoMenuActivity;
-import lukelunix.ntnumple.contact.FacilityInfoActivity;
+import lukelunix.ntnumple.coursehelp.CoursehelpActivity;
+import lukelunix.ntnumple.contact.ContactActivity;
 import lukelunix.ntnumple.todolist.TodoListActivity;
-import lukelunix.ntnumple.links.ToolsActivity;
+import lukelunix.ntnumple.links.LinksActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void courseHelpClick(){
-        startActivity(new Intent(getApplicationContext(), CourseInfoMenuActivity.class));
+        startActivity(new Intent(getApplicationContext(), CoursehelpActivity.class));
     }
 
     private void facilityInfoClick(){
-        startActivity(new Intent(getApplicationContext(), FacilityInfoActivity.class));
+        startActivity(new Intent(getApplicationContext(), ContactActivity.class));
     }
 
     private void todoListClick(){
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void toolsClick(){
-        startActivity(new Intent(getApplicationContext(), ToolsActivity.class));
+        startActivity(new Intent(getApplicationContext(), LinksActivity.class));
     }
 
     @Override

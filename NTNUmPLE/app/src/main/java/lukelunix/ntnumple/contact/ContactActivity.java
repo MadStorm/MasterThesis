@@ -17,7 +17,7 @@ import lukelunix.ntnumple.contact.studentservice.StudentserviceActivity;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 
-public class FacilityInfoActivity extends AppCompatActivity implements View.OnClickListener{
+public class ContactActivity extends AppCompatActivity implements View.OnClickListener{
 
 
     //Main menu buttons
