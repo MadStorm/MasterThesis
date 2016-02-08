@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="lukelunix.ntnumple.tools.kahoot.KahootActivity"
+    tools:context="lukelunix.ntnumple.links.kahoot.KahootActivity"
     android:background="#ffffff">
 
     <WebView

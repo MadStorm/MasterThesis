@@ -8,9 +8,9 @@ import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.coursehelp.CourseInfoMenuActivity;
-import lukelunix.ntnumple.facilityinfo.FacilityInfoActivity;
+import lukelunix.ntnumple.contact.FacilityInfoActivity;
 import lukelunix.ntnumple.todolist.TodoListActivity;
-import lukelunix.ntnumple.tools.ToolsActivity;
+import lukelunix.ntnumple.links.ToolsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_menu);
         coursehelp = (ImageButton)findViewById(R.id.imageButtonCourseHelp);
         coursehelp.setOnClickListener(this);
         facilitinfo = (ImageButton)findViewById(R.id.imageButtonFacilityInfo);

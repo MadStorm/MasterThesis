@@ -8,14 +8,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
-import lukelunix.ntnumple.coursehelp.courserating.ClassmateActivity;
-import lukelunix.ntnumple.coursehelp.courserating.CourseratingActivity;
+import lukelunix.ntnumple.coursehelp.classmate.ClassmateActivity;
 import lukelunix.ntnumple.coursehelp.courses.CoursesActivity;
 import lukelunix.ntnumple.coursehelp.forum.ForumActivity;
 import lukelunix.ntnumple.mainmenu.MainActivity;
-import lukelunix.ntnumple.tools.kahoot.KahootActivity;
-import lukelunix.ntnumple.tools.mazemap.MazemapActivity;
-import lukelunix.ntnumple.tools.roomreservation.RoomreservationActivity;
 
 public class CourseInfoMenuActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,7 +23,7 @@ public class CourseInfoMenuActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course_info_menu);
+        setContentView(R.layout.activity_coursehelp_menu);
         courses = (ImageButton) findViewById(R.id.imageButtonCourses);
         courses.setOnClickListener(this);
         courserating = (ImageButton) findViewById(R.id.imageButtonCourseRating);
