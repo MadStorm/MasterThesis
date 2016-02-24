@@ -43,8 +43,8 @@
                 android:layout_marginBottom="50dp"/>
 
             <ImageButton
-                android:id="@+id/imageButtonRoomReservation"
-                android:background="@drawable/orakelicon"
+                android:id="@+id/imageButtonKahoot"
+                android:background="@drawable/kahooticon"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
@@ -53,14 +53,15 @@
                 android:layout_marginBottom="5dp"/>
 
             <TextView
-                android:id="@+id/textViewRoomReservation"
-                android:text="Room Reserv."
+                android:id="@+id/textViewKahoot"
+                android:text="Kahoot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="120dp"
-                android:layout_marginRight="15dp" />
+                android:layout_marginRight="15dp"/>
+
 
 
 
@@ -76,8 +77,8 @@
             android:layout_marginBottom="25dp" >
 
             <ImageButton
-                android:id="@+id/imageButtonKahoot"
-                android:background="@drawable/kahooticon"
+                android:id="@+id/imageButtonRoomReservation"
+                android:background="@drawable/orakelicon"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
@@ -86,8 +87,8 @@
                 android:layout_marginBottom="5dp"/>
 
             <TextView
-                android:id="@+id/textViewKahoot"
-                android:text="Kahoot"
+                android:id="@+id/textViewRoomReservation"
+                android:text="Room Reserv."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -95,7 +96,6 @@
                 android:width="120dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="50dp"/>
-
 
             <ImageButton
                 android:id="@+id/imageButtonMazeMap"
