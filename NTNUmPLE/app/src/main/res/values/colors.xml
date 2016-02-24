@@ -5,4 +5,5 @@
     <color name="colorContact">#caaf00</color>
     <color name="colorTodoList">#975100</color>
     <color name="colorLinks">#039b00</color>
+    <color name="colorTextPopup">#ffffff</color>
 </resources>
