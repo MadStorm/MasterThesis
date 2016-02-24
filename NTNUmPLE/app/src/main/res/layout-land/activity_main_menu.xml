@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="top">
+
+
+            <ImageButton
+                android:id="@+id/imageButtonCourseHelp"
+                android:background="@drawable/schoolhat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonFacilityInfo"
+                android:background="@drawable/contactlist"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonTodoList"
+                android:background="@drawable/checklist"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonTools"
+                android:background="@drawable/bookmarks"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:text="Course Help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="100dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:text="Contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="100dp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:text="To-Do List"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="100dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:text="Links"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="100dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
