@@ -3,9 +3,37 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#00509E</item>
-        <item name="colorPrimaryDark">#00509E</item>
-        <item name="colorAccent">#00509E</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppThemeCourse" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorCourse</item>
+        <item name="colorPrimaryDark">@color/colorCourse</item>
+        <item name="colorAccent">@color/colorCourse</item>
+    </style>
+
+    <style name="AppThemeContact" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorContact</item>
+        <item name="colorPrimaryDark">@color/colorContact</item>
+        <item name="colorAccent">@color/colorContact</item>
+    </style>
+
+    <style name="AppThemeTodoList" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTodoList</item>
+        <item name="colorPrimaryDark">@color/colorTodoList</item>
+        <item name="colorAccent">@color/colorTodoList</item>
+    </style>
+
+    <style name="AppThemeLinks" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorLinks</item>
+        <item name="colorPrimaryDark">@color/colorLinks</item>
+        <item name="colorAccent">@color/colorLinks</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
