@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         //==========================================================================================
-        //Main Menu
+        //Main screen
         <activity
             android:name=".mainmenu.MainActivity"
             android:label="@string/app_name">
@@ -32,8 +32,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        //==========================================================================================
-        //Main menu buttons
         <activity
             android:name=".coursehelp.CoursehelpActivity"
             android:label="@string/activity_name_course_help" />
@@ -58,7 +56,7 @@
             android:name=".coursehelp.forum.ForumActivity"
             android:label="@string/activity_name_forum" />
         //==========================================================================================
-        //Facility Info Buttons
+        //Contact Menu
         <activity
             android:name=".contact.faculties.FacultiesActivity"
             android:label="@string/activity_name_faculty" />
@@ -83,7 +81,7 @@
             android:name=".todolist.TodoListActivity"
             android:label="@string/activity_name_todolist" />
         //==========================================================================================
-        //Tools Menu
+        //Links Menu
         <activity
             android:name=".links.roomreservation.RoomreservationActivity"
             android:label="Room Reservation"
@@ -96,7 +94,11 @@
             android:name=".links.kahoot.KahootActivity"
             android:label="@string/activity_name_kahoot"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".links.innsida.InnsidaActivity"></activity>
+        <activity
+            android:name=".links.innsida.InnsidaActivity"
+            android:label="Innsida"
+            android:theme="@style/AppTheme.NoActionBar" />
+        //==========================================================================================
     </application>
 
 </manifest>

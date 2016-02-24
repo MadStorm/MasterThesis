@@ -7,7 +7,7 @@
     <string name="activity_name_course_help">Course Help</string>
     <string name="activity_name_facility_info">Contact</string>
     <string name="activity_name_todo_list">To-do List</string>
-    <string name="activity_name_tools">Tools</string>
+    <string name="activity_name_tools">Links</string>
 
     //Course Help
     <string name="activity_name_courses">Courses</string>
@@ -15,7 +15,7 @@
     <string name="activity_name_forum">Forum</string>
     <string name="activity_name_classmate">Classmate</string>
 
-    //Facility Info
+    //Contact
     <string name="activity_name_faculty">Faculties</string>
     <string name="activity_name_library">Libraries</string>
     <string name="activity_name_orakel">Orakel</string>
@@ -26,7 +26,7 @@
     //To-do List
     <string name="activity_name_todolist">To-Do List</string>
 
-    //Tools
+    //Links
     <string name="activity_name_roomreservation">Room Reservation</string>
     <string name="activity_name_kahoot">Kahoot</string>
     <string name="activity_name_mazemap">Mazemap</string>
