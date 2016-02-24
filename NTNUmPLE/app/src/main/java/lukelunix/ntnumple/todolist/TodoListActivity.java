@@ -1,9 +1,11 @@
 package lukelunix.ntnumple.todolist;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
 
@@ -41,6 +44,16 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final String PREFS_NAME = "MyPrefsFile";
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        if (settings.getBoolean("first_launch_after_install", true)) {
+            //the app is being launched for first time, do something
+            startActivity(new Intent(TodoListActivity.this, Popup.class));
+
+            // record the fact that the app has been started at least once
+            settings.edit().putBoolean("first_launch_after_install", false).commit();
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
 
