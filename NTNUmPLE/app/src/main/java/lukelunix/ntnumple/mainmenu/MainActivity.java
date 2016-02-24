@@ -1,10 +1,13 @@
 package lukelunix.ntnumple.mainmenu;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.coursehelp.CoursehelpActivity;
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton facilitinfo;
     private ImageButton todolist;
     private ImageButton tools;
+
 
 
     @Override
