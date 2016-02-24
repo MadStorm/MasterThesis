@@ -4,6 +4,7 @@
     <string name="app_name">NTNU mPLE</string>
 
     //Main Menu
+    <string name="activity_name_main_menu">Main Menu</string>
     <string name="activity_name_course_help">Course Help</string>
     <string name="activity_name_facility_info">Contact</string>
     <string name="activity_name_todo_list">To-do List</string>
@@ -30,6 +31,20 @@
     <string name="activity_name_roomreservation">Room Reservation</string>
     <string name="activity_name_kahoot">Kahoot</string>
     <string name="activity_name_mazemap">Mazemap</string>
+
+
+    <string-array name="todolist_freshman">
+
+    </string-array>
+
+    <string-array name="todolist_sophomore">
+
+    </string-array>
+
+    <string-array name="todolist_junior">
+
+    </string-array>
+
 
     <string-array name="course_names">
         <item>IT2805</item>
