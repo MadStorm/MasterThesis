@@ -33,12 +33,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/AppThemeCourse"
             android:name=".coursehelp.CoursehelpActivity"
             android:label="@string/activity_name_course_help" />
         <activity
+            android:theme="@style/AppThemeContact"
             android:name=".contact.ContactActivity"
             android:label="@string/activity_name_facility_info" />
         <activity
+            android:theme="@style/AppThemeLinks"
             android:name=".links.LinksActivity"
             android:label="@string/activity_name_tools" />
         //==========================================================================================
@@ -78,6 +81,7 @@
         //==========================================================================================
         //To-do List
         <activity
+            android:theme="@style/AppThemeTodoList"
             android:name=".todolist.TodoListActivity"
             android:label="@string/activity_name_todolist" />
         //==========================================================================================
