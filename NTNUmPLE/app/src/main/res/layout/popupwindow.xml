@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#848484"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextPopup"
+        android:textStyle="bold"
+        android:lineSpacingMultiplier="1"
+        android:text="\n
+        Hi and welcome to your To-Do List!\n
+        By entering which year, you will get\n
+        a customized list to remember what \n
+        tasks could be imporant to remember. \n
+        \n
+        If you dont want to use this, \n
+        just click outside the popup window!"
+
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonFreshman"
+        android:text="1 Year Student (Freshman)"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:id="@+id/radioButtonSophomore"
+        android:text="2 Year Student (Sophomore)"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/radioButtonFreshman"
+        android:checked="false" />
+
+    <RadioButton
+        android:id="@+id/radioButtonJunior"
+        android:text="3 Year Student (Junior)"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/radioButtonSophomore"
+        android:checked="false" />
+
+
+
+
+</LinearLayout>
