@@ -8,31 +8,25 @@
 
 
     <TextView
-        android:layout_width="300dp"
+        android:id="@+id/textPopup"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:textColor="@color/colorTextPopup"
         android:textStyle="bold"
         android:lineSpacingMultiplier="1"
-        android:text="\n
-        Hi and welcome to your To-Do List!\n
-        By entering which year, you will get\n
-        a customized list to remember what \n
-        tasks could be imporant to remember. \n
-        \n
-        If you dont want to use this, \n
-        just click outside the popup window!"
-
         />
-
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <RadioButton
         android:id="@+id/radioButtonFreshman"
         android:text="1 Year Student (Freshman)"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:layout_alignParentTop="true"
-        android:checked="false" />
+        android:layout_alignParentTop="true" />
 
     <RadioButton
         android:id="@+id/radioButtonSophomore"
@@ -40,8 +34,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_below="@+id/radioButtonFreshman"
-        android:checked="false" />
+        android:layout_below="@+id/radioButtonFreshman" />
 
     <RadioButton
         android:id="@+id/radioButtonJunior"
@@ -49,10 +42,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_below="@+id/radioButtonSophomore"
-        android:checked="false" />
+        android:layout_below="@+id/radioButtonSophomore" />
 
-
+</RadioGroup>
 
 
 </LinearLayout>
