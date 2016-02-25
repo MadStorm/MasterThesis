@@ -5,13 +5,11 @@
     android:layout_height="fill_parent"
     android:gravity="center">
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:weightSum="1">
-
+        android:gravity="top">
 
     <EditText
         android:layout_width="fill_parent"
@@ -28,12 +26,26 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:id="@+id/listView"
             android:layout_gravity="center_horizontal" />
 
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
 
+        <!--
+        <Button
+            android:id="@+id/buttonPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popup" /> -->
+    </LinearLayout>
 
 
 </RelativeLayout>
