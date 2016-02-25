@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +23,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -33,6 +37,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     //Declare To-do List activity variables
     private EditText editTextItem;
     private Button buttonAddItem;
+    private Button buttonPopup;
     private ListView listItems;
     private TaskAdapter arrayAdapter;
     private ArrayList<String> strikeThroughText;
@@ -41,25 +46,34 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     private String taskFile = "todotasks.txt";
     private String doneTaskFile = "donetasks.txt";
 
+    //Reference to the TodoLIstActivity
+    private static TodoListActivity todolistclass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final String PREFS_NAME = "MyPrefsFile";
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
+
         if (settings.getBoolean("first_launch_after_install", true)) {
             //the app is being launched for first time, do something
+
             startActivity(new Intent(TodoListActivity.this, Popup.class));
 
             // record the fact that the app has been started at least once
             settings.edit().putBoolean("first_launch_after_install", false).commit();
         }
 
+        setTodoListClass();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
+
+
 
         //Initialize To-do List variables
         editTextItem = (EditText)findViewById(R.id.editText);
         buttonAddItem = (Button)findViewById(R.id.buttonAdd);
+        buttonPopup = (Button)findViewById(R.id.buttonPopup);
         listItems = (ListView)findViewById(R.id.listView);
 
         arrayAdapter = null;
@@ -69,7 +83,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         readStrikeThroughItems();
         readItemsFromFile();
 
-        //Add OnClickListeners to button and textfield
+        //Add OnClickListeners to buttons and textfield
         buttonAddItem.setOnClickListener(this);
         editTextItem.setOnKeyListener(this);
         setupListViewListener();
@@ -83,7 +97,43 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.homewhite);
+        getOverflowMenu();
     }
+
+    private void getOverflowMenu() {
+
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            if(menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(config, false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    //Set todolistclass reference
+    private void setTodoListClass() {
+        todolistclass = this;
+    }
+
+    //Get the todolistclass reference
+    public static TodoListActivity getTodoLIst(){
+        return todolistclass;
+    }
+
 
     //Return to Main Menu
     @Override
@@ -93,6 +143,10 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
                 Intent homeIntent = new Intent(this, MainActivity.class);
                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
+            break;
+            case R.id.buttonPopup:
+                startActivity(new Intent(TodoListActivity.this, Popup.class));
+                break;
         }
         return (super.onOptionsItemSelected(menuItem));
     }
@@ -205,6 +259,39 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    //Add items to list by radio button click
+    public void addTasksByRadioButton(int radiobutton){
+
+        if(radiobutton == 1){
+            addItem("9. Check your assignment deadlines on itslearning");
+            addItem("8. Create your Timetable for your courses at 'https://ntnu.1024.no'");
+            addItem("7. Check Itslearning that you have access to all courses");
+            addItem("6. Log on the wireless network on campus");
+            addItem("5. Apply for Lånekassen (Norwegian students)");
+            addItem("5. Get your Student ID card");
+            addItem("4. Change your address at Posten.no (Norwegian students)");
+            addItem("3. Register a NTNU user account");
+            addItem("2. Register on Studweb and check that you are enrolled in the right courses/major");
+            addItem("1. Pay your Semester fee");
+        }
+        else if(radiobutton == 2){
+            addItem("6. Refresh your Timetable for your courses at 'https://ntnu.1024.no'");
+            addItem("5. Check your assignment deadlines on itslearning");
+            addItem("4. Check Itslearning that you have access to all courses");
+            addItem("3. Apply for Lånekassen (Norwegian students)");
+            addItem("2. Check Studweb that you are enrolled in the right courses/major");
+            addItem("1. Pay your Semester fee");
+        }
+        else{
+            addItem("5. Check your assignment deadlines on itslearning");
+            addItem("4. Check Itslearning that you have access to all courses");
+            addItem("3. Apply for Lånekassen (Norwegian students)");
+            addItem("2. Check Studweb that you are enrolled in the right courses/major");
+            addItem("1. Pay your Semester fee");
+        }
+        writeFilesToFile();
+    }
+
 
     //Add Item OnClick Function for to-do list Button
     @Override
@@ -219,7 +306,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     //Add Item On Click Function for to-do list KeyButtons
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
-        if(event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DPAD_CENTER){
+        if(event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
             this.addItem(this.editTextItem.getText().toString());
         }
         return false;
