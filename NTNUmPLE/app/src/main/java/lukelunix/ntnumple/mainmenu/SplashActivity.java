@@ -18,7 +18,7 @@ public class SplashActivity extends Activity {
         Thread timerThread = new Thread(){
             public void run(){
                 try{
-                    sleep(2000); //CHANGE BACK TO 2000 WHEN DONE
+                    sleep(1000); //CHANGE BACK TO 2000 WHEN DONE
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
