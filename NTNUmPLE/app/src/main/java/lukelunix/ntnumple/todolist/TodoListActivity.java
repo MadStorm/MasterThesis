@@ -1,5 +1,7 @@
 package lukelunix.ntnumple.todolist;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
@@ -38,6 +40,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextItem;
     private Button buttonAddItem;
     private Button buttonPopup;
+    private Button buttonDeleteAllTasks;
     private ListView listItems;
     private TaskAdapter arrayAdapter;
     private ArrayList<String> strikeThroughText;
@@ -69,11 +72,11 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_todo_list);
 
 
-
         //Initialize To-do List variables
         editTextItem = (EditText)findViewById(R.id.editText);
         buttonAddItem = (Button)findViewById(R.id.buttonAdd);
         buttonPopup = (Button)findViewById(R.id.buttonPopup);
+        buttonDeleteAllTasks = (Button) findViewById(R.id.buttonDeleteAll);
         listItems = (ListView)findViewById(R.id.listView);
 
         arrayAdapter = null;
@@ -143,9 +146,67 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
                 Intent homeIntent = new Intent(this, MainActivity.class);
                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
-            break;
+                break;
             case R.id.buttonPopup:
                 startActivity(new Intent(TodoListActivity.this, Popup.class));
+                break;
+            case R.id.buttonDelete:
+                new AlertDialog.Builder(TodoListActivity.this)
+                        .setTitle("Delete done tasks")
+                        .setMessage("Are you sure you want to delete done tasks?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // continue with delete done tasks
+                                for (int i = 0; i < strikeThroughText.size(); i++) {
+                                    for (int j = 0; j < arrayAdapter.getList().size(); j++) {
+                                        if (strikeThroughText.get(i).equals(arrayAdapter.getItem(j).toString())) {
+                                            arrayAdapter.removeTask(j);
+                                        }
+                                    }
+                                }
+                                strikeThroughText.clear();
+
+                                //Write to-do file that task is removed
+                                writeFilesToFile();
+                                writeStrikeThroughItem();
+
+                                //Refresh the adapter after changes
+                                arrayAdapter.notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(R.drawable.warning)
+                        .show();
+                break;
+            case R.id.buttonDeleteAll:
+                new AlertDialog.Builder(TodoListActivity.this)
+                        .setTitle("Delete all tasks")
+                        .setMessage("Are you sure you want to delete all tasks?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // continue with delete
+                                strikeThroughText.clear();
+                                arrayAdapter.clear();
+
+                                //Write to-do file that task is removed
+                                writeFilesToFile();
+                                writeStrikeThroughItem();
+
+                                //Refresh the adapter after changes
+                                arrayAdapter.notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(R.drawable.warning)
+                        .show();
                 break;
         }
         return (super.onOptionsItemSelected(menuItem));
@@ -263,11 +324,11 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     public void addTasksByRadioButton(int radiobutton){
 
         if(radiobutton == 1){
-            addItem("9. Check your assignment deadlines on itslearning");
-            addItem("8. Create your Timetable for your courses at 'https://ntnu.1024.no'");
-            addItem("7. Check Itslearning that you have access to all courses");
-            addItem("6. Log on the wireless network on campus");
-            addItem("5. Apply for Lånekassen (Norwegian students)");
+            addItem("10. Check your assignment deadlines on itslearning");
+            addItem("9. Create your Timetable for your courses at 'https://ntnu.1024.no'");
+            addItem("8. Check Itslearning that you have access to all courses");
+            addItem("7. Log on the wireless network on campus");
+            addItem("6. Apply for Lånekassen (Norwegian students)");
             addItem("5. Get your Student ID card");
             addItem("4. Change your address at Posten.no (Norwegian students)");
             addItem("3. Register a NTNU user account");
