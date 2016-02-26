@@ -5,14 +5,22 @@
 
     <item
         android:id="@+id/buttonDelete"
-        android:title="Delete"
+        android:title="Delete done tasks"
+        combat:showAsAction="never">
+    </item>
+
+    <item
+        android:id="@+id/buttonDeleteAll"
+        android:title="Delete all tasks"
         combat:showAsAction="never">
     </item>
 
     <item
         android:id="@+id/buttonPopup"
-        android:title="Popup"
+        android:title="Student's year of study"
         combat:showAsAction="never">
     </item>
+
+
 
 </menu>
