@@ -12,6 +12,7 @@ import android.widget.Toast;
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.coursehelp.CoursehelpActivity;
 import lukelunix.ntnumple.contact.ContactActivity;
+import lukelunix.ntnumple.feedback.Feedback;
 import lukelunix.ntnumple.todolist.TodoListActivity;
 import lukelunix.ntnumple.links.LinksActivity;
 
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        Feedback.app_launched(this);
+
         coursehelp = (ImageButton)findViewById(R.id.imageButtonCourseHelp);
         coursehelp.setOnClickListener(this);
         facilitinfo = (ImageButton)findViewById(R.id.imageButtonFacilityInfo);
