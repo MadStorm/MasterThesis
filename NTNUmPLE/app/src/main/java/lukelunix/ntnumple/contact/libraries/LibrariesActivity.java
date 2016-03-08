@@ -39,6 +39,7 @@ public class LibrariesActivity extends AppCompatActivity {
 
         //Set LibraryAdapter to ExpandableListView
         expLibraryList.setAdapter(ladapter);
+
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

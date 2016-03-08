@@ -37,6 +37,7 @@ public class OrakelActivity extends AppCompatActivity {
 
         //Set OrakelAdapter to ExpandableListView
         expOrakelList.setAdapter(oadapter);
+
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

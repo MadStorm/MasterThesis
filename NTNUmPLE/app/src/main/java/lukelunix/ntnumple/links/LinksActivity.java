@@ -9,10 +9,10 @@ import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.links.innsida.InnsidaActivity;
-import lukelunix.ntnumple.mainmenu.MainActivity;
 import lukelunix.ntnumple.links.kahoot.KahootActivity;
 import lukelunix.ntnumple.links.mazemap.MazemapActivity;
 import lukelunix.ntnumple.links.roomreservation.RoomreservationActivity;
+import lukelunix.ntnumple.mainmenu.MainActivity;
 
 public class LinksActivity extends AppCompatActivity implements View.OnClickListener{
 
