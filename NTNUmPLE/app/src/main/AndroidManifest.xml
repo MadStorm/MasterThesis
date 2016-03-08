@@ -4,8 +4,8 @@
     android:versionCode="2"
     android:versionName="1.1">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +17,9 @@
         //Splash Screen
         <activity
             android:name=".mainmenu.SplashActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +30,9 @@
         //Main screen
         <activity
             android:name=".mainmenu.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_main_menu"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="lukelunix.ntnumple.MAINACTIVITY" />
 
@@ -40,116 +40,136 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/AppThemeCourse"
             android:name=".coursehelp.CoursehelpActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_course_help"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeCourse" />
         <activity
-            android:theme="@style/AppThemeContact"
             android:name=".contact.ContactActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_facility_info"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact" />
         <activity
-            android:theme="@style/AppThemeLinks"
             android:name=".links.LinksActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_tools"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeLinks" />
         //==========================================================================================
         //Course Help Menu
         <activity
             android:name=".coursehelp.classmate.CourseratingActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_courserating"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeCourse"/>
         <activity
             android:name=".coursehelp.courses.CoursesActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_courses"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeCourse"/>
         <activity
             android:name=".coursehelp.classmate.ClassmateActivity"
-            android:label="Classmate"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/activity_name_classmate"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeCourse"/>
         <activity
             android:name=".coursehelp.forum.ForumActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_forum"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeCourse"/>
+        <activity
+            android:name=".coursehelp.faqaboutcourses.FAQactivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/activity_name_faq"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCourse"/>
+
         //==========================================================================================
         //Contact Menu
         <activity
             android:name=".contact.faculties.FacultiesActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_faculty"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".contact.libraries.LibrariesActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_library"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".contact.orakel.OrakelActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_orakel"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".contact.studentservice.StudentserviceActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_studentservice"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".contact.akademika.AkademikaActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_akademika"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".contact.sit.SiTActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_sit"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeContact"
+            android:screenOrientation="portrait" />
         //==========================================================================================
         //To-do List
         <activity
-            android:theme="@style/AppThemeTodoList"
             android:name=".todolist.TodoListActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_todolist"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeTodoList" />
         //==========================================================================================
         //Links Menu
         <activity
             android:name=".links.roomreservation.RoomreservationActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="Room Reservation"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeLinks" />
         <activity
             android:name=".links.mazemap.MazemapActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_mazemap"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeLinks" />
         <activity
             android:name=".links.kahoot.KahootActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_kahoot"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeLinks" />
         <activity
             android:name=".links.innsida.InnsidaActivity"
+            android:configChanges="keyboardHidden|orientation"
             android:label="Innsida"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"/>
+            android:theme="@style/AppThemeLinks" />
         //==========================================================================================
+        //Popup Menu
+        <activity
+            android:name=".todolist.Popup"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/AppTheme.Popup"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".todolist.Popup"
-            android:theme="@style/AppTheme.Popup">
-        </activity>
     </application>
 
 </manifest>
