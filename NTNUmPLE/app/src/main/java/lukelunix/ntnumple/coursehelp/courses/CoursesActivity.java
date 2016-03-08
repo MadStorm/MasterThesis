@@ -11,11 +11,14 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import lukelunix.ntnumple.R;
+import lukelunix.ntnumple.helpclasses.InternetConnection;
+import lukelunix.ntnumple.helpclasses.InternetConnectionAlertDialog;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 public class CoursesActivity extends AppCompatActivity {
 
     private WebView webview;
+    private InternetConnection ic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,12 @@ public class CoursesActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Loading...",
                 Toast.LENGTH_SHORT).show();
+
+        //Check for Internet connection
+        ic = new InternetConnection(this);
+        if( !ic.isNetworkAvailable() ){
+            InternetConnectionAlertDialog.showNoInternetConnectionAlertDialog(this);
+        }
     }
 
     //Return to Main Menu
