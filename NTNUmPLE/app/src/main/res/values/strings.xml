@@ -15,6 +15,7 @@
     <string name="activity_name_courserating">Course Rating</string>
     <string name="activity_name_forum">Forum</string>
     <string name="activity_name_classmate">Classmate</string>
+    <string name="activity_name_faq">FAQ</string>
 
     //Contact
     <string name="activity_name_faculty">Faculties</string>
