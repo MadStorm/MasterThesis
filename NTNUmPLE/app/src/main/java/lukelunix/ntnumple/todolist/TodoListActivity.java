@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,7 +18,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
 
@@ -95,7 +93,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         listItems.setAdapter(arrayAdapter);
         listItems.setOnItemClickListener(this);
 
-        //Add home menu button to actionbar
+        //Add home todolistmenu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -121,7 +119,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.todolistmenu, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -138,7 +136,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
-    //Return to Main Menu
+    //Main Menu buttons
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
