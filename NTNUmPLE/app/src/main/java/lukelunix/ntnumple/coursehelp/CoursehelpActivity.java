@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.coursehelp.classmate.ClassmateActivity;
 import lukelunix.ntnumple.coursehelp.courses.CoursesActivity;
+import lukelunix.ntnumple.coursehelp.faqaboutcourses.FAQactivity;
 import lukelunix.ntnumple.coursehelp.forum.ForumActivity;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
@@ -55,7 +56,7 @@ public class CoursehelpActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void courseratingClick(){
-        startActivity(new Intent(getApplicationContext(), ClassmateActivity.class));
+        startActivity(new Intent(getApplicationContext(), FAQactivity.class));
     }
 
     private void forumClick(){
