@@ -30,41 +30,6 @@ public class FacultyAdapter extends BaseExpandableListAdapter{
     }
 
     @Override
-    public int getGroupCount() {
-        return facultyList.size();
-    }
-
-    @Override
-    public int getChildrenCount(int groupPosition) {
-        return faculties.get(facultyList.get(groupPosition)).size();
-    }
-
-    @Override
-    public Object getGroup(int groupPosition) {
-        return facultyList.get(groupPosition);
-    }
-
-    @Override
-    public Object getChild(int parent, int child) {
-        return faculties.get(facultyList.get(parent)).get(child);
-    }
-
-    @Override
-    public long getGroupId(int groupPosition) {
-        return groupPosition;
-    }
-
-    @Override
-    public long getChildId(int parent  , int child) {
-        return child;
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return false;
-    }
-
-    @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String group_title = (String) getGroup(groupPosition);
         if(convertView == null){
@@ -89,8 +54,44 @@ public class FacultyAdapter extends BaseExpandableListAdapter{
         return convertView;
     }
 
+
+    @Override
+    public int getGroupCount() {
+        return facultyList.size();
+    }
+
+    @Override
+    public Object getGroup(int groupPosition) {
+        return facultyList.get(groupPosition);
+    }
+
+    @Override
+    public long getGroupId(int groupPosition) {
+        return groupPosition;
+    }
+
+    @Override
+    public Object getChild(int parent, int child) {
+        return faculties.get(facultyList.get(parent)).get(child);
+    }
+
+    @Override
+    public long getChildId(int parent  , int child) {
+        return child;
+    }
+
+    @Override
+    public int getChildrenCount(int groupPosition) {
+        return faculties.get(facultyList.get(groupPosition)).size();
+    }
+
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return false;
+    }
+
+    @Override
+    public boolean hasStableIds() {
         return false;
     }
 }
