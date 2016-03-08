@@ -1,9 +1,5 @@
 package lukelunix.ntnumple.coursehelp.faqaboutcourses;
 
-import android.text.Html;
-import android.widget.ListView;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;

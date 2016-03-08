@@ -15,6 +15,7 @@ import android.widget.TextView;
  * Created by Luka on 01.03.2016.
  */
 public class Feedback {
+
     private final static String APP_TITLE = "NTNU mPLE";// App Name
 
     private final static int DAYS_UNTIL_PROMPT = 3;//Min number of days

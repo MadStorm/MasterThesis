@@ -6,7 +6,6 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import lukelunix.ntnumple.R;
 
