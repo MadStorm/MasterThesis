@@ -17,7 +17,7 @@
     <TextView
         android:id="@+id/faq_category_sub"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
         android:paddingLeft="80dp"
