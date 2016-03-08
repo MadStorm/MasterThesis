@@ -93,7 +93,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         listItems.setAdapter(arrayAdapter);
         listItems.setOnItemClickListener(this);
 
-        //Add home todolistmenu button to actionbar
+        //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
