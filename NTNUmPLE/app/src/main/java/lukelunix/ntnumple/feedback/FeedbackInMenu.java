@@ -36,7 +36,7 @@ public class FeedbackInMenu {
         b1.setText("Give feedback Google Survey");
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://goo.gl/forms/rk9EIhO99V")));
+                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://goo.gl/forms/RgQn8kbc2u")));
                 // dialog.dismiss();
             }
         });
