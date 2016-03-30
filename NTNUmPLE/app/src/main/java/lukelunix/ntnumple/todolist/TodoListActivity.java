@@ -29,6 +29,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 import lukelunix.ntnumple.R;
+import lukelunix.ntnumple.feedback.FeedbackGradingScaleToDoList;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 public class TodoListActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener,
@@ -69,6 +70,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
 
+        FeedbackGradingScaleToDoList.app_launched(this);
 
         //Initialize To-do List variables
         editTextItem = (EditText)findViewById(R.id.editText);
@@ -404,7 +406,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //If item is removed check if item is in done task (Strikethrough list)
-                if(strikeThroughText != null) {
+                if (strikeThroughText != null) {
                     for (int i = 0; i < strikeThroughText.size(); i++) {
                         if (strikeThroughText.get(i).equals(arrayAdapter.getItem(position).toString())) {
                             strikeThroughText.remove(arrayAdapter.getItem(position).toString());

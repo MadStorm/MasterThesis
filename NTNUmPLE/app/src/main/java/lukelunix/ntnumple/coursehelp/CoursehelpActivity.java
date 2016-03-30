@@ -11,6 +11,7 @@ import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.coursehelp.courses.CoursesActivity;
 import lukelunix.ntnumple.coursehelp.faqaboutcourses.FAQactivity;
 import lukelunix.ntnumple.coursehelp.forum.ForumActivity;
+import lukelunix.ntnumple.feedback.FeedbackGradingScaleCourseHelp;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 public class CoursehelpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -31,6 +32,7 @@ public class CoursehelpActivity extends AppCompatActivity implements View.OnClic
         forum = (ImageButton) findViewById(R.id.imageButtonForum);
         forum.setOnClickListener(this);
 
+        FeedbackGradingScaleCourseHelp.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import lukelunix.ntnumple.R;
+import lukelunix.ntnumple.feedback.FeedbackGradingScaleLinks;
 import lukelunix.ntnumple.links.innsida.InnsidaActivity;
 import lukelunix.ntnumple.links.kahoot.KahootActivity;
 import lukelunix.ntnumple.links.mazemap.MazemapActivity;
@@ -34,6 +35,8 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
         roomreservation.setOnClickListener(this);
         innsida = (ImageButton) findViewById(R.id.imageButtonInnsida);
         innsida.setOnClickListener(this);
+
+        FeedbackGradingScaleLinks.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

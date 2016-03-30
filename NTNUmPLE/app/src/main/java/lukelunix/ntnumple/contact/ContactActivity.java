@@ -14,6 +14,7 @@ import lukelunix.ntnumple.contact.libraries.LibrariesActivity;
 import lukelunix.ntnumple.contact.orakel.OrakelActivity;
 import lukelunix.ntnumple.contact.sit.SiTActivity;
 import lukelunix.ntnumple.contact.studentservice.StudentserviceActivity;
+import lukelunix.ntnumple.feedback.FeedbackGradingScaleContact;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 
@@ -45,6 +46,8 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         akademika.setOnClickListener(this);
         sit = (ImageButton)findViewById(R.id.imageButtonSiT);
         sit.setOnClickListener(this);
+
+        FeedbackGradingScaleContact.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -117,5 +120,4 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
 
         }
     }
-
 }
