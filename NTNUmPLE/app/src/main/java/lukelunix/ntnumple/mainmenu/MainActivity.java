@@ -15,7 +15,6 @@ import java.lang.reflect.Field;
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.contact.ContactActivity;
 import lukelunix.ntnumple.coursehelp.CoursehelpActivity;
-import lukelunix.ntnumple.feedback.Feedback;
 import lukelunix.ntnumple.feedback.FeedbackInMenu;
 import lukelunix.ntnumple.links.LinksActivity;
 import lukelunix.ntnumple.todolist.TodoListActivity;
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-        Feedback.app_launched(this);
 
         coursehelp = (ImageButton)findViewById(R.id.imageButtonCourseHelp);
         coursehelp.setOnClickListener(this);
