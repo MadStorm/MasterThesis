@@ -26,12 +26,13 @@ public class FeedbackInMenu {
         layout.setOrientation(LinearLayout.VERTICAL);
 
         TextView textView = new TextView(mContext);
-        textView.setText("If you enjoy using " + APP_TITLE + ", please take a moment to give feedback and rate it.\n Thanks for your support!");
+        textView.setText("If you enjoy using " + APP_TITLE + ", please take a moment to rate it.\n Thanks for your support!");
         textView.setGravity(Gravity.CENTER);
         textView.setWidth(240);
         textView.setPadding(4, 0, 4, 10);
         layout.addView(textView);
 
+        /*
         Button b1 = new Button(mContext);
         b1.setText("Give feedback Google Survey");
         b1.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,7 @@ public class FeedbackInMenu {
                 // dialog.dismiss();
             }
         });
-        layout.addView(b1);
+        layout.addView(b1);*/
 
         Button b2 = new Button(mContext);
         b2.setText("Rate " + APP_TITLE);
