@@ -43,6 +43,11 @@ public class SiTData {
         //SiT Reception
         List<String> sitReception = new ArrayList<String>();
 
+        //SiT Sports
+        List<String> sitGymGloshaugen = new ArrayList<String>();
+        List<String> sitGymPortalen = new ArrayList<String>();
+        List<String> sitGymDragvoll = new ArrayList<String>();
+
         //=========================================================================================//
         //Cantines
         //=========================================================================================//
@@ -213,6 +218,38 @@ public class SiTData {
                 "Postboks 2460, Sluppen\n" +
                 "7005 Trondheim");
 
+        //=========================================================================================//
+        //SiT Sports
+        //=========================================================================================//
+
+        //SiT Gym Dragvoll
+        sitGymDragvoll.add("Opening hours: Mon-Fri 07.30–22.00\n" +
+                "Sat 10.00-20.00\n" +
+                "Sun 10.00-22.00");
+        sitGymDragvoll.add("Phone: 73 55 06 31");
+        sitGymDragvoll.add("E-mail: idrett@sit.no");
+        sitGymDragvoll.add("Visiting address: Loholt allè 81");
+
+
+        //SiT Gym Gløshaugen
+        sitGymGloshaugen.add("Opening hours: Mon, Wed 06.30–23.00\n" +
+                "Tue, Thurs 07.30-23.00\n" +
+                "Sat 10.00-20.00\n" +
+                "Sun 10.00-22.00");
+        sitGymGloshaugen.add("Phone: 73 59 54 60");
+        sitGymGloshaugen.add("E-mail: idrett@sit.no");
+        sitGymGloshaugen.add("Visiting address: Christian Frederiks gate 20");
+
+        //SiT Gym Portalen
+        sitGymPortalen.add("Opening hours: Mon, Wed 07.30–22.00\n" +
+                "Tue, Thurs 06.30-22.00\n" +
+                "Fri 07.30-21.00\n" +
+                "Sat 10.00-18.00\n" +
+                "Sun 10.00-21.00");
+        sitGymPortalen.add("Phone: 95 30 98 18");
+        sitGymPortalen.add("E-mail: idrett@sit.no");
+        sitGymPortalen.add("Visiting address: Dyre Halses gate 1");
+
 
         //Put SiT Category together with Arraylist of sit_info
         //Cantine
@@ -243,6 +280,12 @@ public class SiTData {
 
         //Reception
         sitData.put("SiT Reception", sitReception);
+
+        //Sports
+        sitData.put("SiT Gym Dragvoll", sitGymDragvoll);
+        sitData.put("SiT Gym Gløshaugen", sitGymGloshaugen);
+        sitData.put("SiT Gym Portalen", sitGymPortalen);
+
 
 
         //Return Treemap with Akademika_Categories and Akademika_Info
