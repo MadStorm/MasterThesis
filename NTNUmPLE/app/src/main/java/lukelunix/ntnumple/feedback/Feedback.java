@@ -16,7 +16,7 @@ import android.widget.TextView;
  */
 public class Feedback {
 
-    private final static String APP_TITLE = "NTNU mPLE";// App Name
+    private final static String APP_TITLE = "NTNU GO";// App Name
 
     private final static int DAYS_UNTIL_PROMPT = 3;//Min number of days
     private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches

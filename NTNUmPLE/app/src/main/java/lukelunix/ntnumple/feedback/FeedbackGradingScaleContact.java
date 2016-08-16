@@ -20,7 +20,7 @@ import lukelunix.ntnumple.helpclasses.InternetConnectionAlertDialog;
 public class FeedbackGradingScaleContact {
     private static WebView webview;
     private static InternetConnection ic;
-    private final static String APP_TITLE = "NTNU mPLE";// App Name
+    private final static String APP_TITLE = "NTNU GO";// App Name
 
     private final static int MINUTES_UNTIL_PROMPT = 30;//Min number of minutes
     private final static int LAUNCHES_UNTIL_PROMPT = 2;//Min number of launches

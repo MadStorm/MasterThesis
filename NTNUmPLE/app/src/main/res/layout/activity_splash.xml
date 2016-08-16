@@ -6,7 +6,7 @@
 
     <ImageView android:id="@+id/splashscreen" android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ntnu_mple_splashscreen4"
+        android:src="@drawable/ntnu_go_splashscreen"
         android:layout_gravity="center"
         android:background="#ffffff" />
 

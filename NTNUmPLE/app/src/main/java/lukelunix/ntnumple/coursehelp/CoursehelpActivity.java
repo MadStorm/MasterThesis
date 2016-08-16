@@ -32,7 +32,7 @@ public class CoursehelpActivity extends AppCompatActivity implements View.OnClic
         forum = (ImageButton) findViewById(R.id.imageButtonForum);
         forum.setOnClickListener(this);
 
-        FeedbackGradingScaleCourseHelp.app_launched(this);
+        //FeedbackGradingScaleCourseHelp.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

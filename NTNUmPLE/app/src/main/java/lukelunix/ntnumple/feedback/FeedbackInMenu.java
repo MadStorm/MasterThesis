@@ -15,7 +15,7 @@ import android.widget.TextView;
  */
 public class FeedbackInMenu {
 
-    private final static String APP_TITLE = "NTNU mPLE";// App Name
+    private final static String APP_TITLE = "NTNU GO";// App Name
 
 
     public void showFeedbackDialog(final Context mContext) {

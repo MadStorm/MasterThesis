@@ -1,7 +1,7 @@
 <resources>
 
     //App name
-    <string name="app_name">NTNU mPLE</string>
+    <string name="app_name">NTNU GO</string>
 
     //Main Menu
     <string name="activity_name_main_menu">Main Menu</string>

@@ -36,7 +36,7 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
         innsida = (ImageButton) findViewById(R.id.imageButtonInnsida);
         innsida.setOnClickListener(this);
 
-        FeedbackGradingScaleLinks.app_launched(this);
+        //FeedbackGradingScaleLinks.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

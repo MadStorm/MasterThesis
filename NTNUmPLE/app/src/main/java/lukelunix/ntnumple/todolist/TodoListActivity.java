@@ -70,7 +70,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
 
-        FeedbackGradingScaleToDoList.app_launched(this);
+        //FeedbackGradingScaleToDoList.app_launched(this);
 
         //Initialize To-do List variables
         editTextItem = (EditText)findViewById(R.id.editText);

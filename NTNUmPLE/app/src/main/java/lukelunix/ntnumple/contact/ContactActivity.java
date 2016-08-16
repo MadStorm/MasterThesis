@@ -47,7 +47,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         sit = (ImageButton)findViewById(R.id.imageButtonSiT);
         sit.setOnClickListener(this);
 
-        FeedbackGradingScaleContact.app_launched(this);
+        //FeedbackGradingScaleContact.app_launched(this);
 
         //Add home menu button to actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
