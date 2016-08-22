@@ -21,9 +21,15 @@ public class FacultiesData {
         List<String> facultyOfMedicine = new ArrayList<String>();
         List<String> facultyOfSocialSciences = new ArrayList<String>();
 
+        // Former faculties of Sør-Trønderlag University College
+        List<String> facultyOfHealthAndSocialSciences = new ArrayList<String>();
+        List<String> facultyOfTeacherAndInterpreterEducation = new ArrayList<String>();
+        List<String> facultyOfTechnology = new ArrayList<String>();
+        List<String> trondheimBusinessSchool= new ArrayList<String>();
+
+
         //Faculty of Architecture
         facultyOfArchitecture.add("Phone: +47 73 55 02 75");
-        facultyOfArchitecture.add("Fax: +47 73 59 50 94");
         facultyOfArchitecture.add("E-mail: fak-adm@ab.ntnu.no");
         facultyOfArchitecture.add("Visiting address:\n"+
                 "Alfred Getz vei 3\n"+
@@ -38,7 +44,7 @@ public class FacultiesData {
         facultyOfEngineeringScience.add("Office hours:\n"+
                 "Mon-Fri 9.30 - 11.30 and\n"+
                 "12.30 - 15.00");
-        facultyOfEngineeringScience.add("Phone: (+47) 73 59 37 00");
+        facultyOfEngineeringScience.add("Phone: +47 73 59 37 00");
         facultyOfEngineeringScience.add("E-mail: studier@ivt.ntnu.no");
         facultyOfEngineeringScience.add("Visiting address:\n"+
                 "Geology building, 1st floor");
@@ -53,7 +59,6 @@ public class FacultiesData {
                 "Mon-Fri 08:00-15:45 (September-April) \n" +
                 "Mon-Fri 08:00-15:00 (May-August)");
         facultyOfHumanities.add("Phone: +47 73 59 65 95");
-        facultyOfHumanities.add("Fax: +47 73 59 10 30");
         facultyOfHumanities.add("E-mail: postmottak@hf.ntnu.no");
         facultyOfHumanities.add("Visiting address:\n" +
                 "The University Centre at Dragvoll\n" +
@@ -66,7 +71,6 @@ public class FacultiesData {
 
         //Faculty of Natural Sciences
         facultyOfNaturalSciences.add("Phone: +47 73 59 41 97");
-        facultyOfNaturalSciences.add("Fax: +47 73 59 14 10");
         facultyOfNaturalSciences.add("E-mail: postmottak@nt.ntnu.no");
         facultyOfNaturalSciences.add("Visiting address:\n"+
                 "Høgskoleringen 5\n"+
@@ -84,7 +88,6 @@ public class FacultiesData {
                 "(1. May - 31. Aug: 0800-1500)\n" +
                 "Student reception: 0800-1500");
         facultyOfIME.add("Phone: +47 73 59 42 02");
-        facultyOfIME.add("Fax: +47 73 59 36 28");
         facultyOfIME.add("E-mail: studinfo@ime.ntnu.no");
         facultyOfIME.add("Visiting address:\n" +
                 "Electrical Engineering A, 2nd Floor\n" +
@@ -104,11 +107,11 @@ public class FacultiesData {
         facultyOfMedicine.add("E-mail: dmf-post@medisin.ntnu.no");
         facultyOfMedicine.add("Visiting address:\n" +
                 "Medisinsk teknisk forskningssenter (MTFS)\n" +
-                "Det medisinske fakultet\n" +
+                "Faculty of Medicine,\n" +
                 "Olav Kyrres g. 9");
         facultyOfMedicine.add("Postal address:\n" +
                 "Postboks 8905\n" +
-                "NTNU, Det medisinske fakultet\n" +
+                "NTNU, Faculty of Medicine,\n" +
                 "7491 Trondheim\n" +
                 "Norway");
 
@@ -118,13 +121,66 @@ public class FacultiesData {
         facultyOfSocialSciences.add("E-mail: postmottak@svt.ntnu.no");
         facultyOfSocialSciences.add("Visiting address:\n"+
                 "NTNU, Faculty of Social Sciences and Technology Management\n" +
-                "Loholt Allè 85, Paviljong A\n" +
-                "N - 7048 Trondheim");
+                "Loholt Allè 85, Paviljong A");
         facultyOfSocialSciences.add("Postal address:\n" +
                 "NTNU, Faculty of Social Sciences and Technology Management\n" +
-                "Dragvoll\n" +
-                "7491 Trondheim\n"+
+                "Dragvoll\n"+
+                "Loholt Allè 85, Paviljong A"+
+                "7048 Trondheim\n"+
                 "Norway");
+
+
+        //Sør-Trønderlag University College
+
+        //Faculty of Health and Social Sciences
+        facultyOfHealthAndSocialSciences.add("Phone: + 47 73 41 22 83 and "+"\n"
+                +"+ 47 73 59 41 00");
+        facultyOfHealthAndSocialSciences.add("E-mail: studier@fhs.ntnu.no");
+
+        //Faculty of Teacher and Interpreter Education
+        facultyOfTeacherAndInterpreterEducation.add("Opening hours:\n"
+                + "08.00-15.00\n"
+                + "Wed closed 09.30-11.00");
+        facultyOfTeacherAndInterpreterEducation.add("Phone: + 47 73 55 98 50");
+        facultyOfTeacherAndInterpreterEducation.add("E-mail: postmottak@flt.ntnu.no");
+        facultyOfTeacherAndInterpreterEducation.add("Visiting address:\n"
+                +"Rotvoll Campus,\n"
+                +"Rotvoll allé 1,\n"
+                +"7053 Ranheim");
+        facultyOfTeacherAndInterpreterEducation.add("Postal address:\n"
+                + "Norwegian University of Science and Technology, NTNU\n"
+                + "Faculty of Teacher and Interpreter Education\n"
+                + "Postboks 8900\n"
+                + "NO-7491 Trondheim\n"
+                + "Norway");
+
+        //Faculty of Technology
+        facultyOfTechnology.add("Opening hours:\n"
+                +"Mon-Thurs 08.00-15.30\n"
+                +"Fri 08.00-11.30 and 12.00-15.30");
+        facultyOfTechnology.add("Phone: +47 73 55 94 50");
+        facultyOfTechnology.add("E-mail: studier@ft.ntnu.no");
+        facultyOfTechnology.add("Visiting address:\n"
+            +"\"Brygghuset\", E. C. Dahls gt. 2");
+        facultyOfTechnology.add("Postal address:\n"
+                +"NTNU, Faculty of Technology\n"
+                +"NO-7491 Trondheim\n"
+                +"Norway");
+
+        //Trondheim Business School
+        trondheimBusinessSchool.add("Opening hours:\n"
+                +"Mon-Thurs 08.00-15.00\n"
+                +"Fri 08.00-12.00");
+        trondheimBusinessSchool.add("Phone: +47 73 55 99 50");
+        trondheimBusinessSchool.add("E-mail: postmottak@hhit.ntnu.no");
+        trondheimBusinessSchool.add("Visiting address:\n"
+                +"Trondheim Business School\n"
+                +"Klæbuveien 72\n"
+                +"Trondheim");
+        trondheimBusinessSchool.add("Postal address:\n"
+                +"NTNU, Trondheim Business School\n"
+                +"NO-7491 Trondheim\n"
+                +"Norway");
 
 
         //Put Faculty Category together with Arraylist of faculty_info
@@ -135,6 +191,12 @@ public class FacultiesData {
         facultiesData.put("Faculty of Information Technology, Mathematics and Electrical Engineering", facultyOfIME);
         facultiesData.put("Faculty of Medicine", facultyOfMedicine);
         facultiesData.put("Faculty of Social Sciences and Technology Management", facultyOfSocialSciences);
+        facultiesData.put("Faculty of Health and Social Sciences", facultyOfHealthAndSocialSciences);
+        facultiesData.put("Faculty of Teacher and Interpreter Education", facultyOfTeacherAndInterpreterEducation);
+        facultiesData.put("Faculty of Technology", facultyOfTechnology);
+        facultiesData.put("Trondheim Business School", trondheimBusinessSchool);
+
+
 
         //Return Treemap with Faculty_Categories and Faculty_Info
         return facultiesData;
