@@ -1,6 +1,7 @@
 package lukelunix.ntnumple.todolist;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,8 +12,11 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +37,7 @@ import lukelunix.ntnumple.feedback.FeedbackGradingScaleToDoList;
 import lukelunix.ntnumple.mainmenu.MainActivity;
 
 public class TodoListActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener,
-        AdapterView.OnItemClickListener{
+        AdapterView.OnItemClickListener {
 
     //Declare To-do List activity variables
     private EditText editTextItem;
@@ -73,11 +77,11 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         //FeedbackGradingScaleToDoList.app_launched(this);
 
         //Initialize To-do List variables
-        editTextItem = (EditText)findViewById(R.id.editText);
-        buttonAddItem = (Button)findViewById(R.id.buttonAdd);
-        buttonPopup = (Button)findViewById(R.id.buttonPopup);
+        editTextItem = (EditText) findViewById(R.id.editText);
+        buttonAddItem = (Button) findViewById(R.id.buttonAdd);
+        buttonPopup = (Button) findViewById(R.id.buttonPopup);
         buttonDeleteAllTasks = (Button) findViewById(R.id.buttonDeleteAll);
-        listItems = (ListView)findViewById(R.id.listView);
+        listItems = (ListView) findViewById(R.id.listView);
 
         arrayAdapter = null;
         strikeThroughText = new ArrayList<String>();
@@ -90,6 +94,33 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         buttonAddItem.setOnClickListener(this);
         editTextItem.setOnKeyListener(this);
         setupListViewListener();
+
+        //Remove focus on textfield
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        editTextItem.setFocusable(false);
+
+        //Add focus and cursor on textfield when pressed
+        editTextItem.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                editTextItem.setFocusableInTouchMode(true);
+                editTextItem.setCursorVisible(true);
+                return false;
+            }
+        });
+
+        //Remove focus and cursor from texfield when listview is pressed
+        listItems.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                editTextItem.setFocusable(false);
+                editTextItem.setCursorVisible(false);
+                return false;
+            }
+        });
+
 
         //Add ArrayAdapter and OnItemClickListener to ListView
         listItems.setAdapter(arrayAdapter);
@@ -108,7 +139,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         try {
             ViewConfiguration config = ViewConfiguration.get(this);
             Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-            if(menuKeyField != null) {
+            if (menuKeyField != null) {
                 menuKeyField.setAccessible(true);
                 menuKeyField.setBoolean(config, false);
             }
@@ -133,7 +164,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     //Get the todolistclass reference
-    public static TodoListActivity getTodoLIst(){
+    public static TodoListActivity getTodoLIst() {
         return todolistclass;
     }
 
@@ -213,7 +244,6 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
-
     // Read items from "todotasks.txt" file
     // If there are items add to list, if not catch ioexception
     private void readItemsFromFile() {
@@ -225,7 +255,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
             ArrayList<String> list = new ArrayList<String>();
 
             Scanner s = new Scanner(todoFile);
-            while (s.hasNextLine()){
+            while (s.hasNextLine()) {
                 list.add(s.nextLine());
             }
             s.close();
@@ -234,7 +264,7 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
             Collections.reverse(list);
 
             //Add all tasks from file
-            for (int i = 0; i<list.size(); i++) {
+            for (int i = 0; i < list.size(); i++) {
                 addItemFromFile(list.get(i));
             }
 
@@ -286,21 +316,20 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     //Add Item to To-do list from file
-    private void addItemFromFile(String item){
-        if(item.length() >0){
+    private void addItemFromFile(String item) {
+        if (item.length() > 0) {
             Task t = new Task();
             t.setTaskDescription(item);
 
             //Check through done tasks to strikethrough text or not
-            if(strikeThroughText != null){
-                for(int i= 0; i<strikeThroughText.size(); i++){
-                    if(strikeThroughText.get(i).equals(item) ){
+            if (strikeThroughText != null) {
+                for (int i = 0; i < strikeThroughText.size(); i++) {
+                    if (strikeThroughText.get(i).equals(item)) {
                         t.setDone(true);
                     }
 
                 }
-            }
-            else {
+            } else {
                 t.setDone(false);
             }
             this.arrayAdapter.insert(t, 0);
@@ -309,8 +338,8 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     //Add Item to To-do list function
-    private void addItem(String item){
-        if(item.length() >0){
+    private void addItem(String item) {
+        if (item.length() > 0) {
             item = item.replaceAll("\\r|\\n", " ");
             Task t = new Task();
             t.setTaskDescription(item);
@@ -321,9 +350,9 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     }
 
     //Add items to list by radio button click
-    public void addTasksByRadioButton(int radiobutton){
+    public void addTasksByRadioButton(int radiobutton) {
 
-        if(radiobutton == 1){
+        if (radiobutton == 1) {
             addItem("10. Check your assignment deadlines on itslearning");
             addItem("9. Create your Timetable for your courses at 'https://ntnu.1024.no'");
             addItem("8. Check Itslearning that you have access to all courses");
@@ -334,16 +363,14 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
             addItem("3. Register a NTNU user account");
             addItem("2. Register on Studweb and check that you are enrolled in the right courses/major");
             addItem("1. Pay your Semester fee");
-        }
-        else if(radiobutton == 2){
+        } else if (radiobutton == 2) {
             addItem("6. Refresh your Timetable for your courses at 'https://ntnu.1024.no'");
             addItem("5. Check your assignment deadlines on itslearning");
             addItem("4. Check Itslearning that you have access to all courses");
             addItem("3. Apply for Lånekassen (Norwegian students)");
             addItem("2. Check Studweb that you are enrolled in the right courses/major");
             addItem("1. Pay your Semester fee");
-        }
-        else{
+        } else {
             addItem("5. Check your assignment deadlines on itslearning");
             addItem("4. Check Itslearning that you have access to all courses");
             addItem("3. Apply for Lånekassen (Norwegian students)");
@@ -357,22 +384,23 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
     //Add Item OnClick Function for to-do list Button
     @Override
     public void onClick(View v) {
-        if(v == this.buttonAddItem ){
+        if (v == this.buttonAddItem) {
             this.addItem(this.editTextItem.getText().toString());
             //Write tasks to file
             writeFilesToFile();
         }
+
+
     }
 
     //Add Item On Click Function for to-do list KeyButtons
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
-        if(event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
             this.addItem(this.editTextItem.getText().toString());
         }
         return false;
     }
-
 
     //On item click get item and add Strikethrough or remove Strikethrought from text
     @Override
@@ -384,12 +412,12 @@ public class TodoListActivity extends AppCompatActivity implements View.OnClickL
         task.setDone(!task.isDone());
 
         //Check if task is done. If true add strikethrough, if not remove strikethrough
-        if(task.isDone()){
+        if (task.isDone()) {
             taskDescription.setPaintFlags(taskDescription.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             strikeThroughText.add(arrayAdapter.getItem(position).toString());
             //Write to file that task is done
             writeStrikeThroughItem();
-        }else{
+        } else {
             taskDescription.setPaintFlags(taskDescription.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
             strikeThroughText.remove(arrayAdapter.getItem(position).toString());
             //Write to file that task is not done
