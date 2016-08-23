@@ -32,6 +32,8 @@
     <string name="activity_name_roomreservation">Room Reservation</string>
     <string name="activity_name_kahoot">Kahoot</string>
     <string name="activity_name_mazemap">Mazemap</string>
+    <string name="activity_name_innsida">Innsida</string>
+    <string name="activity_name_itslearning">Itslearning</string>
 
 
     <string-array name="todolist_freshman">
