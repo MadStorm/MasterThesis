@@ -18,8 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:gravity="right"
-            android:layout_marginBottom="25dp">
+            android:gravity="right">
 
             <ImageButton
                 android:id="@+id/imageButtonInnsida"
@@ -40,7 +39,7 @@
                 android:textAlignment="center"
                 android:width="120dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonKahoot"
@@ -60,9 +59,28 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="120dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"/>
 
+            <ImageButton
+                android:id="@+id/imageButtonDummyLinks"
+                android:background="#ffffff"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"/>
 
+            <TextView
+                android:id="@+id/textViewDummyLinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"/>
 
 
         </LinearLayout>
@@ -73,8 +91,28 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:gravity="left"
-            android:layout_marginBottom="25dp" >
+            android:gravity="left">
+
+            <ImageButton
+                android:id="@+id/imageButtonMazeMap"
+                android:background="@drawable/mazemapicon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewMazeMap"
+                android:text="MazeMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAlignment="center"
+                android:width="120dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
                 android:id="@+id/imageButtonRoomReservation"
@@ -95,11 +133,11 @@
                 android:textAlignment="center"
                 android:width="120dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="15dp"/>
 
             <ImageButton
-                android:id="@+id/imageButtonMazeMap"
-                android:background="@drawable/mazemapicon"
+                android:id="@+id/imageButtonDummyLinks2"
+                android:background="#ffffff"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
@@ -108,14 +146,15 @@
                 android:layout_marginBottom="5dp"/>
 
             <TextView
-                android:id="@+id/textViewMazeMap"
-                android:text="Mazemap"
+                android:id="@+id/textViewDummyLinks2"
+                android:text=""
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textAlignment="center"
                 android:width="120dp"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"/>
 
 
 
