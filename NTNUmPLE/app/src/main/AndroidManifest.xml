@@ -164,7 +164,13 @@
         <activity
             android:name=".links.innsida.InnsidaActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:label="Innsida"
+            android:label="@string/activity_name_innsida"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLinks" />
+        <activity
+            android:name=".links.itslearning.ItslearningActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/activity_name_itslearning"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeLinks" />
         //==========================================================================================
@@ -176,11 +182,13 @@
             android:screenOrientation="portrait" />
 
         //Feedback in menu
+        <!--
         <activity
-            android:name=".feedback.FeedbackInMenu"
+            android:name=""
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popup"/>
+            -->
     </application>
 
 </manifest>
