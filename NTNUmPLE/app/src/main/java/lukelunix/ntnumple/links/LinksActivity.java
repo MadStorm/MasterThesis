@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import lukelunix.ntnumple.R;
 import lukelunix.ntnumple.feedback.FeedbackGradingScaleLinks;
 import lukelunix.ntnumple.links.innsida.InnsidaActivity;
+import lukelunix.ntnumple.links.itslearning.ItslearningActivity;
 import lukelunix.ntnumple.links.kahoot.KahootActivity;
 import lukelunix.ntnumple.links.mazemap.MazemapActivity;
 import lukelunix.ntnumple.links.roomreservation.RoomreservationActivity;
@@ -22,6 +23,7 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
     private ImageButton kahoot;
     private ImageButton roomreservation;
     private ImageButton innsida;
+    private ImageButton itslearning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
         roomreservation.setOnClickListener(this);
         innsida = (ImageButton) findViewById(R.id.imageButtonInnsida);
         innsida.setOnClickListener(this);
+        //itslearning = (ImageButton) findViewById(R.id.imageButtonItslearning);
+        //itslearning.setOnClickListener(this);
 
         //FeedbackGradingScaleLinks.app_launched(this);
 
@@ -74,6 +78,10 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
         startActivity(new Intent(getApplicationContext(), InnsidaActivity.class));
     }
 
+    private void itslearningClick(){
+        startActivity(new Intent(getApplicationContext(), ItslearningActivity.class));
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -90,6 +98,9 @@ public class LinksActivity extends AppCompatActivity implements View.OnClickList
             case R.id.imageButtonInnsida:
                 innsidaClick();
                 break;
+            /*case R.id.imageButtonItslearning:
+                itslearningClick();
+                break;*/
         }
     }
 }
