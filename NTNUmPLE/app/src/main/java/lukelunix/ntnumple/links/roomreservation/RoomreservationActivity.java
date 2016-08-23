@@ -1,10 +1,13 @@
 package lukelunix.ntnumple.links.roomreservation;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -31,7 +34,7 @@ public class RoomreservationActivity extends AppCompatActivity {
         webview.getSettings().setUseWideViewPort(true);
         webview.getSettings().setLoadWithOverviewMode(true);
 
-        webview.loadUrl("https://romres.ntnu.no/2016/Login.aspx?ReturnUrl=%2f2016%2f");
+        webview.loadUrl("https://romres.ntnu.no/2016/");
         webview.setWebViewClient(new WebViewClient() {
 
             @Override
@@ -40,11 +43,12 @@ public class RoomreservationActivity extends AppCompatActivity {
                 return true;
             }
         });
+
         Toast.makeText(getApplicationContext(), "Loading...",
                 Toast.LENGTH_SHORT).show();
         //Check for Internet connection
         ic = new InternetConnection(this);
-        if( !ic.isNetworkAvailable() ){
+        if (!ic.isNetworkAvailable()) {
             InternetConnectionAlertDialog.showNoInternetConnectionAlertDialog(this);
         }
 
@@ -53,6 +57,11 @@ public class RoomreservationActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.homewhite);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 
     //Return to Main Menu
